@@ -40,6 +40,7 @@ export const initialHomepage: HomepageContent = {
   hero_subtitle: "Transforming spaces into extraordinary brand experiences through innovative exhibition stall design, precision fabrication and flawless turnkey execution.",
   hero_cta_primary: "Explore Our Projects",
   hero_cta_secondary: "Start Your Project",
+  hero_image_url: "/images/hero-stall.jpg",
   hero_3d_model_url: "",
   about_heading: "TURNING IDEAS INTO REMARKABLE SPACES",
   about_subheading: "PRECISION CRAFTSMANSHIP MEETS ARCHITECTURAL VISION",

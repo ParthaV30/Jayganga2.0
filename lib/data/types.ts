@@ -31,6 +31,7 @@ export interface HomepageContent {
   hero_subtitle: string;
   hero_cta_primary: string;
   hero_cta_secondary: string;
+  hero_image_url?: string;
   hero_3d_model_url?: string;
   about_heading: string;
   about_subheading: string;

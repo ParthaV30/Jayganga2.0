@@ -171,6 +171,19 @@ export default function HomepageEditorPage() {
 
             <div className="space-y-2">
               <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
+                Hero Exhibition Showcase Image URL
+              </label>
+              <input
+                type="text"
+                placeholder="/images/hero-stall.png or external CDN image URL"
+                value={formData.hero_image_url || ''}
+                onChange={(e) => handleChange('hero_image_url', e.target.value)}
+                className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36] font-mono"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                 Custom 3D Model GLTF/GLB Asset URL (Optional)
               </label>
               <input
