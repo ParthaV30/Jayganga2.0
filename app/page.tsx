@@ -29,7 +29,7 @@ export default function HomePage() {
 
   return (
     <SmoothScroll>
-      <div className="min-h-screen bg-[#07070a] text-white selection:bg-amber-400 selection:text-black">
+      <div className="min-h-screen bg-[#F2EFE8] text-[#292B28] selection:bg-[#C65D36] selection:text-white">
         {/* Architectural Sticky Navigation Header */}
         <Navbar />
 

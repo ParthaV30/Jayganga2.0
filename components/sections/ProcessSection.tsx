@@ -1,15 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { 
-  Search, 
-  Compass, 
-  Hammer, 
-  Truck, 
-  CheckCircle2, 
-  ArrowRight, 
-  Workflow 
-} from 'lucide-react';
+import { Workflow } from 'lucide-react';
 import { HomepageContent } from '../../lib/data/types';
 
 interface ProcessSectionProps {
@@ -20,41 +12,41 @@ const STEPS = [
   {
     number: "01",
     title: "Requirement Analysis",
-    stageName: "Discovery & Spatial Programming",
+    stageName: "Discovery & Spatial Brief",
     duration: "Day 1 – 5",
-    description: "Deep dive into your brand's marketing objectives, visitor throughput goals, product display dimensions, and venue structural guidelines.",
+    description: "Deep dive into your brand marketing objectives, visitor throughput goals, product dimensions, and venue structural guidelines.",
     deliverables: ["Exhibition space brief", "Footprint allocation plan", "Structural feasibility sign-off"]
   },
   {
     number: "02",
     title: "Concept & 3D Design",
-    stageName: "Photorealistic CAD Architecture",
+    stageName: "CAD Spatial Architecture",
     duration: "Day 6 – 14",
-    description: "Our principal spatial architects sculpt your stall in cinematic 3D. We test sightlines, foot-traffic flow, lighting lux levels, and finish materials.",
+    description: "Our spatial architects sculpt your stall in cinematic 3D. We test sightlines, foot-traffic flow, lighting lux levels, and finish materials.",
     deliverables: ["Photorealistic 4K 3D renders", "Interactive 360° VR preview", "Venue organizer drawing packet"]
   },
   {
     number: "03",
     title: "Fabrication & Production",
-    stageName: "Factory Machining & Pre-Assembly",
+    stageName: "Machining & Pre-Assembly",
     duration: "Day 15 – 35",
-    description: "Structural metal framing, 5-axis CNC timber joinery, acrylic laser cutting, and automated paint finishing inside our 45,000 sq.ft workshops.",
+    description: "Structural metal framing, 5-axis CNC timber joinery, acrylic laser cutting, and paint finishing inside our 45,000 sq.ft workshops.",
     deliverables: ["Full structural dry-fit mockup", "Client pre-shipment inspection", "Barcoded logistics packing"]
   },
   {
     number: "04",
     title: "Installation & Execution",
-    stageName: "Venue Rigging & Rapid Build",
+    stageName: "Venue Rigging & Build",
     duration: "Day 36 – 38",
-    description: "Our certified installation crew unloads at the expo hall. We erect the subfloor, trusses, acoustic panels, LED walls, and photometric lighting.",
-    deliverables: ["Onsite structural safety sign-off", "AV & LED screen calibration", "Deep architectural cleaning"]
+    description: "Our certified installation crew unloads at the expo hall. We erect the subfloor, trusses, acoustic panels, LED walls, and lighting.",
+    deliverables: ["Onsite safety sign-off", "AV & LED screen calibration", "Deep architectural cleaning"]
   },
   {
     number: "05",
     title: "Final Handover",
-    stageName: "Turnkey Sign-Off & Standby",
+    stageName: "Turnkey Sign-Off",
     duration: "18 hrs Pre-Show",
-    description: "Final walkthrough with your marketing leadership. We hand over keys, provide standby electrical and AV technicians throughout expo show days.",
+    description: "Final walkthrough with your marketing leadership. We hand over keys and provide standby technicians throughout expo show days.",
     deliverables: ["Client sign-off protocol", "24/7 onsite standby support", "Post-expo strike & warehousing"]
   }
 ];
@@ -63,26 +55,26 @@ export default function ProcessSection({ content }: ProcessSectionProps) {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section id="process" className="relative py-28 md:py-36 bg-[#08080c] border-t border-white/[0.08] overflow-hidden">
-      {/* Background Ambience */}
-      <div className="absolute inset-0 architectural-grid opacity-15 pointer-events-none" />
+    <section id="process" className="relative py-28 md:py-36 bg-[#F2EFE8] text-[#292B28] border-t border-[#777B70]/20 overflow-hidden">
+      {/* Subtle Hairline Grid */}
+      <div className="absolute inset-0 architectural-grid opacity-50 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <div className="max-w-3xl mb-20 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-amber-400/30 text-amber-300 text-xs font-mono uppercase tracking-widest">
-            <Workflow className="w-3.5 h-3.5" />
-            <span>{content.process_subheading || 'OUR FIVE-PHASE TURNKEY DELIVERY LIFECYCLE'}</span>
+        <div className="max-w-3xl mb-16 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#FFFFFF] border border-[#777B70]/30 text-[#202522] text-xs font-mono uppercase tracking-widest">
+            <Workflow className="w-3.5 h-3.5 text-[#C65D36]" />
+            <span>{content.process_subheading || 'FIVE-PHASE TURNKEY LIFECYCLE'}</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-[1.12]">
+          <h2 className="text-3xl sm:text-5xl font-black text-[#202522] tracking-tight leading-[1.12]">
             {content.process_heading || 'HOW WE BRING VISIONS TO LIFE'}
           </h2>
-          <p className="text-sm sm:text-base text-neutral-400 font-light max-w-xl">
-            A military-grade project management timeline engineered to eliminate expo floor stress and deliver breathtaking results.
+          <p className="text-sm sm:text-base text-[#777B70] font-normal max-w-xl">
+            A rigid project management timeline engineered to eliminate expo floor stress and deliver exceptional results.
           </p>
         </div>
 
-        {/* 5-Phase Horizontal / Stepped Timeline */}
+        {/* 5-Phase Horizontal Timeline */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           {STEPS.map((step, idx) => {
             const isSelected = activeStep === idx;
@@ -90,47 +82,45 @@ export default function ProcessSection({ content }: ProcessSectionProps) {
               <div
                 key={step.number}
                 onClick={() => setActiveStep(idx)}
-                className={`cursor-pointer p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between space-y-6 ${
+                className={`cursor-pointer p-6 rounded-xl border transition-colors flex flex-col justify-between space-y-6 shadow-sm ${
                   isSelected
-                    ? 'bg-[#12121c] border-amber-400 shadow-xl shadow-amber-400/10'
-                    : 'bg-[#0b0b10] border-white/[0.06] hover:border-white/20'
+                    ? 'bg-[#FFFFFF] border-[#C65D36] ring-1 ring-[#C65D36]'
+                    : 'bg-[#FFFFFF] border-[#777B70]/30 hover:border-[#202522]'
                 }`}
               >
                 {/* Step Index & Duration Pill */}
                 <div className="flex items-center justify-between">
                   <span className={`text-2xl font-black font-mono tracking-tight ${
-                    isSelected ? 'text-amber-400' : 'text-neutral-500'
+                    isSelected ? 'text-[#C65D36]' : 'text-[#777B70]'
                   }`}>
                     {step.number}
                   </span>
-                  <span className="text-[11px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-white/5 text-neutral-400">
+                  <span className="text-[11px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-[#F2EFE8] text-[#777B70] border border-[#777B70]/20">
                     {step.duration}
                   </span>
                 </div>
 
                 {/* Title & Stage Name */}
-                <div className="space-y-1.5">
-                  <h3 className={`text-lg font-bold tracking-tight transition-colors ${
-                    isSelected ? 'text-white' : 'text-neutral-300'
-                  }`}>
+                <div className="space-y-1">
+                  <h3 className="text-base font-bold text-[#202522] tracking-tight">
                     {step.title}
                   </h3>
-                  <div className="text-xs font-mono text-amber-400/80 uppercase">
+                  <div className="text-xs font-mono text-[#C65D36] uppercase font-semibold">
                     {step.stageName}
                   </div>
-                  <p className="text-xs text-neutral-400 leading-relaxed pt-2 font-light">
+                  <p className="text-xs text-[#777B70] leading-relaxed pt-1.5 font-normal">
                     {step.description}
                   </p>
                 </div>
 
                 {/* Deliverables Checklist */}
-                <div className="pt-4 border-t border-white/[0.06] space-y-1.5">
-                  <div className="text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-1">
-                    Key Outputs
+                <div className="pt-3 border-t border-[#777B70]/20 space-y-1.5">
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-[#777B70] mb-0.5">
+                    Outputs
                   </div>
                   {step.deliverables.map((del, i) => (
-                    <div key={i} className="flex items-center gap-1.5 text-[11px] text-neutral-300 font-mono">
-                      <span className="w-1 h-1 rounded-full bg-amber-400 flex-shrink-0" />
+                    <div key={i} className="flex items-center gap-1.5 text-[11px] text-[#292B28] font-mono">
+                      <span className="w-1 h-1 rounded-full bg-[#C65D36] flex-shrink-0" />
                       <span className="truncate">{del}</span>
                     </div>
                   ))}
@@ -143,4 +133,3 @@ export default function ProcessSection({ content }: ProcessSectionProps) {
     </section>
   );
 }
-

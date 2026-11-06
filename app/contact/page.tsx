@@ -13,7 +13,7 @@ export default function ContactPage() {
 
   return (
     <SmoothScroll>
-      <div className="min-h-screen bg-[#07070a] text-white">
+      <div className="min-h-screen bg-[#F2EFE8] text-[#292B28]">
         <Navbar />
 
         <main className="pt-24">

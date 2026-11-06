@@ -134,19 +134,19 @@ export default function BlogManagementPage() {
   return (
     <div className="space-y-8">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#777B70]/20">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-black text-[#202522] tracking-tight">
             Blog & Articles Management
           </h1>
-          <p className="text-xs font-mono text-neutral-400 mt-1">
+          <p className="text-xs font-mono text-[#777B70] mt-1">
             Publish spatial essays, exhibition insights, and SEO-optimized industry perspectives.
           </p>
         </div>
 
         <button
           onClick={openCreateModal}
-          className="px-5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2 active:scale-95"
+          className="px-5 py-2.5 rounded-xl bg-[#C65D36] hover:bg-[#B34E28] text-white font-bold text-xs font-mono uppercase tracking-wider transition-colors flex items-center gap-2 active:scale-95 shadow-sm"
         >
           <Plus className="w-4 h-4" />
           <span>Write New Article</span>
@@ -154,27 +154,27 @@ export default function BlogManagementPage() {
       </div>
 
       {/* Search & Filter */}
-      <div className="p-4 rounded-2xl bg-[#0f0f16] border border-white/10 flex items-center justify-between gap-4">
+      <div className="p-4 rounded-2xl bg-white border border-[#777B70]/20 shadow-sm flex items-center justify-between gap-4">
         <div className="relative w-full max-w-sm">
-          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500" />
+          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#777B70]" />
           <input
             type="text"
             placeholder="Search articles by title or category..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400"
+            className="w-full pl-10 pr-4 py-2 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-xs text-[#292B28] placeholder-[#777B70] focus:outline-none focus:border-[#C65D36]"
           />
         </div>
-        <div className="text-xs font-mono text-neutral-400">
+        <div className="text-xs font-mono text-[#777B70]">
           Total: {blogs.length} articles
         </div>
       </div>
 
       {/* Articles Table */}
-      <div className="overflow-x-auto rounded-2xl border border-white/10 bg-[#0c0c12]">
+      <div className="overflow-x-auto rounded-2xl border border-[#777B70]/20 bg-white shadow-sm">
         <table className="w-full text-left border-collapse text-xs">
           <thead>
-            <tr className="border-b border-white/10 bg-white/[0.02] text-neutral-400 font-mono uppercase">
+            <tr className="border-b border-[#777B70]/15 bg-[#F2EFE8] text-[#777B70] font-mono uppercase">
               <th className="p-4">Article</th>
               <th className="p-4">Category</th>
               <th className="p-4">Status</th>
@@ -182,56 +182,56 @@ export default function BlogManagementPage() {
               <th className="p-4 text-right">Actions</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-white/[0.06]">
+          <tbody className="divide-y divide-[#777B70]/15">
             {filteredBlogs.map((post) => (
-              <tr key={post.id} className="hover:bg-white/[0.02] transition-colors">
+              <tr key={post.id} className="hover:bg-[#F2EFE8]/50 transition-colors">
                 <td className="p-4">
                   <div className="flex items-center gap-3">
                     <img
                       src={post.featured_image}
                       alt={post.title}
-                      className="w-12 h-10 rounded-lg object-cover bg-neutral-900 border border-white/10 flex-shrink-0"
+                      className="w-12 h-10 rounded-lg object-cover bg-neutral-200 border border-[#777B70]/20 flex-shrink-0"
                     />
                     <div>
-                      <div className="font-semibold text-white text-sm line-clamp-1">{post.title}</div>
-                      <div className="text-[11px] font-mono text-neutral-500">/{post.slug}</div>
+                      <div className="font-semibold text-[#202522] text-sm line-clamp-1">{post.title}</div>
+                      <div className="text-[11px] font-mono text-[#777B70]">/{post.slug}</div>
                     </div>
                   </div>
                 </td>
-                <td className="p-4 font-mono text-neutral-300">
+                <td className="p-4 font-mono text-[#292B28]">
                   {post.category}
                 </td>
                 <td className="p-4">
                   <span className={`px-2.5 py-1 rounded text-[10px] font-mono uppercase font-bold ${
                     post.status === 'published'
-                      ? 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/30'
-                      : 'bg-amber-400/10 text-amber-300 border border-amber-400/30'
+                      ? 'bg-emerald-100 text-emerald-800 border border-emerald-300'
+                      : 'bg-[#F2EFE8] text-[#777B70] border border-[#777B70]/30'
                   }`}>
                     {post.status}
                   </span>
                 </td>
-                <td className="p-4 font-mono text-neutral-400">
+                <td className="p-4 font-mono text-[#777B70]">
                   {formatDate(post.published_at)}
                 </td>
                 <td className="p-4 text-right space-x-2">
                   <Link
                     href={`/blog/${post.slug}`}
                     target="_blank"
-                    className="p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 inline-block"
+                    className="p-1.5 rounded-lg text-[#777B70] hover:text-[#202522] hover:bg-[#F2EFE8] inline-block"
                     title="View live article"
                   >
                     <Eye className="w-4 h-4" />
                   </Link>
                   <button
                     onClick={() => openEditModal(post)}
-                    className="p-1.5 rounded-lg text-amber-400 hover:text-amber-300 hover:bg-white/5"
+                    className="p-1.5 rounded-lg text-[#C65D36] hover:text-[#B34E28] hover:bg-[#F2EFE8]"
                     title="Edit article"
                   >
                     <Edit3 className="w-4 h-4" />
                   </button>
                   <button
                     onClick={() => handleDelete(post.id)}
-                    className="p-1.5 rounded-lg text-red-400 hover:text-red-300 hover:bg-white/5"
+                    className="p-1.5 rounded-lg text-red-500 hover:text-red-700 hover:bg-[#F2EFE8]"
                     title="Delete article"
                   >
                     <Trash2 className="w-4 h-4" />
@@ -245,15 +245,15 @@ export default function BlogManagementPage() {
 
       {/* Create / Edit Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-xl">
-          <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#0d0d14] border border-white/10 rounded-2xl shadow-2xl p-6 sm:p-8 space-y-6">
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <h3 className="text-xl font-bold text-white tracking-tight">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-md">
+          <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white border border-[#777B70]/30 rounded-2xl shadow-2xl p-6 sm:p-8 space-y-6 text-[#292B28]">
+            <div className="flex items-center justify-between border-b border-[#777B70]/15 pb-4">
+              <h3 className="text-xl font-bold text-[#202522] tracking-tight">
                 {editingPost ? 'Edit Blog Article' : 'Write New Article'}
               </h3>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="p-2 text-neutral-400 hover:text-white rounded-lg"
+                className="p-2 text-[#777B70] hover:text-[#202522] rounded-lg"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -262,7 +262,7 @@ export default function BlogManagementPage() {
             <form onSubmit={handleSave} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2 sm:col-span-2">
-                  <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                  <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                     Article Title *
                   </label>
                   <input
@@ -271,12 +271,12 @@ export default function BlogManagementPage() {
                     value={formData.title}
                     onChange={(e) => handleTitleChange(e.target.value)}
                     placeholder="e.g. The Future of Exhibition Stall Fabrication"
-                    className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-amber-400"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36]"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                  <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                     URL Slug *
                   </label>
                   <input
@@ -284,24 +284,24 @@ export default function BlogManagementPage() {
                     required
                     value={formData.slug}
                     onChange={(e) => setFormData({ ...formData, slug: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-neutral-300 font-mono text-xs focus:outline-none focus:border-amber-400"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] font-mono text-xs focus:outline-none focus:border-[#C65D36]"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                  <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                     Category
                   </label>
                   <input
                     type="text"
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36]"
                   />
                 </div>
 
                 <div className="space-y-2 sm:col-span-2">
-                  <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                  <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                     Featured Image URL *
                   </label>
                   <input
@@ -309,12 +309,12 @@ export default function BlogManagementPage() {
                     required
                     value={formData.featured_image}
                     onChange={(e) => setFormData({ ...formData, featured_image: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-neutral-300 text-xs font-mono"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-xs font-mono focus:outline-none focus:border-[#C65D36]"
                   />
                 </div>
 
                 <div className="space-y-2 sm:col-span-2">
-                  <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                  <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                     Excerpt / Summary *
                   </label>
                   <textarea
@@ -322,12 +322,12 @@ export default function BlogManagementPage() {
                     required
                     value={formData.excerpt}
                     onChange={(e) => setFormData({ ...formData, excerpt: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36]"
                   />
                 </div>
 
                 <div className="space-y-2 sm:col-span-2">
-                  <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                  <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                     Article Body Content (Markdown Supported) *
                   </label>
                   <textarea
@@ -336,18 +336,18 @@ export default function BlogManagementPage() {
                     value={formData.content}
                     onChange={(e) => setFormData({ ...formData, content: e.target.value })}
                     placeholder="Write in markdown: ## Section Heading, > Quotes, bullet points..."
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white font-mono text-xs leading-relaxed"
+                    className="w-full px-4 py-3 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] font-mono text-xs leading-relaxed focus:outline-none focus:border-[#C65D36]"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                  <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                     Publication Status
                   </label>
                   <select
                     value={formData.status}
                     onChange={(e) => setFormData({ ...formData, status: e.target.value as any })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#111118] border border-white/10 text-white text-xs font-mono"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-xs font-mono focus:outline-none focus:border-[#C65D36]"
                   >
                     <option value="published">Published</option>
                     <option value="draft">Draft</option>
@@ -356,29 +356,29 @@ export default function BlogManagementPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                  <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                     Author Name
                   </label>
                   <input
                     type="text"
                     value={formData.author_name}
                     onChange={(e) => setFormData({ ...formData, author_name: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36]"
                   />
                 </div>
               </div>
 
-              <div className="flex justify-end gap-3 pt-4 border-t border-white/10">
+              <div className="flex justify-end gap-3 pt-4 border-t border-[#777B70]/15">
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-neutral-300 font-mono text-xs uppercase"
+                  className="px-5 py-2.5 rounded-xl bg-[#F2EFE8] hover:bg-[#D6D1C5] text-[#777B70] font-mono text-xs uppercase"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-bold font-mono text-xs uppercase"
+                  className="px-6 py-2.5 rounded-xl bg-[#C65D36] hover:bg-[#B34E28] text-white font-bold font-mono text-xs uppercase shadow-sm"
                 >
                   {editingPost ? 'Update Article' : 'Publish Article'}
                 </button>

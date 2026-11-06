@@ -56,28 +56,27 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#07070a] flex items-center justify-center p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-[#F2EFE8] flex items-center justify-center p-6 relative overflow-hidden">
       {/* Background Architectural Grid */}
-      <div className="absolute inset-0 architectural-grid opacity-25 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/[0.03] blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute inset-0 architectural-grid opacity-30 pointer-events-none" />
 
       <div className="w-full max-w-md relative z-10">
-        <div className="p-8 sm:p-10 rounded-3xl bg-[#0c0c12]/95 border border-white/10 backdrop-blur-2xl shadow-2xl space-y-8">
+        <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#777B70]/20 shadow-2xl space-y-8">
           {/* Logo & Headline */}
           <div className="text-center space-y-3">
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1a1a24] to-[#121218] border border-amber-400/40 text-amber-300 font-mono font-black text-xl shadow-lg shadow-amber-400/10 mb-2">
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#202522] border border-[#202522] text-[#C65D36] font-mono font-black text-xl shadow-md mb-2">
               AF
             </div>
-            <h1 className="text-2xl font-black text-white tracking-tight">
+            <h1 className="text-2xl font-black text-[#202522] tracking-tight">
               AURA FORGE CMS
             </h1>
-            <p className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
+            <p className="text-xs font-mono text-[#777B70] uppercase tracking-widest">
               Administrative Console Access
             </p>
           </div>
 
           {errorMsg && (
-            <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center gap-3 text-red-300 text-xs font-mono">
+            <div className="p-4 rounded-xl bg-red-50 border border-red-200 flex items-center gap-3 text-red-600 text-xs font-mono">
               <AlertCircle className="w-4 h-4 flex-shrink-0" />
               <span>{errorMsg}</span>
             </div>
@@ -86,35 +85,35 @@ export default function AdminLoginPage() {
           {/* Form */}
           <form onSubmit={handleLogin} className="space-y-5">
             <div className="space-y-2">
-              <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+              <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                 Administrator Email
               </label>
               <div className="relative">
-                <Mail className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500" />
+                <Mail className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#777B70]" />
                 <input
                   type="email"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="admin@auraforge-expo.com"
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-neutral-600 focus:outline-none focus:border-amber-400 text-sm transition-colors"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] placeholder-[#777B70]/60 focus:outline-none focus:border-[#C65D36] text-sm transition-colors"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+              <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                 Security Password
               </label>
               <div className="relative">
-                <KeyRound className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500" />
+                <KeyRound className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#777B70]" />
                 <input
                   type="password"
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••••••"
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-neutral-600 focus:outline-none focus:border-amber-400 text-sm transition-colors"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] placeholder-[#777B70]/60 focus:outline-none focus:border-[#C65D36] text-sm transition-colors"
                 />
               </div>
             </div>
@@ -122,7 +121,7 @@ export default function AdminLoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 text-black font-bold text-xs uppercase tracking-wider hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] transition-all flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50"
+              className="w-full py-3.5 px-6 rounded-xl bg-[#C65D36] hover:bg-[#B34E28] text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-sm flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50"
             >
               {isLoading ? (
                 <span>Authenticating Credentials...</span>
@@ -136,23 +135,23 @@ export default function AdminLoginPage() {
           </form>
 
           {/* Demo Credentials Helper Pill */}
-          <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 space-y-2 text-xs font-mono text-neutral-400">
-            <div className="flex items-center gap-2 text-amber-300/90 font-semibold">
-              <Shield className="w-3.5 h-3.5" />
+          <div className="p-4 rounded-xl bg-[#F2EFE8] border border-[#777B70]/20 space-y-2 text-xs font-mono text-[#777B70]">
+            <div className="flex items-center gap-2 text-[#202522] font-semibold">
+              <Shield className="w-3.5 h-3.5 text-[#C65D36]" />
               <span>Standard Demo Credentials:</span>
             </div>
-            <div className="flex justify-between text-neutral-300 pt-1">
-              <span>Email: <code className="text-amber-200">admin@auraforge-expo.com</code></span>
+            <div className="flex justify-between text-[#292B28] pt-1">
+              <span>Email: <code className="text-[#C65D36]">admin@auraforge-expo.com</code></span>
             </div>
-            <div className="flex justify-between text-neutral-300">
-              <span>Password: <code className="text-amber-200">admin123</code></span>
+            <div className="flex justify-between text-[#292B28]">
+              <span>Password: <code className="text-[#C65D36]">admin123</code></span>
             </div>
           </div>
 
           <div className="text-center">
             <Link
               href="/"
-              className="text-xs font-mono text-neutral-500 hover:text-neutral-300 transition-colors"
+              className="text-xs font-mono text-[#777B70] hover:text-[#202522] transition-colors"
             >
               ← Return to Public Website
             </Link>

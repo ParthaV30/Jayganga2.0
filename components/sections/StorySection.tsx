@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import StoryStallCanvas from '../3d/StoryStallCanvas';
 import { HomepageContent } from '../../lib/data/types';
-import { Layers, CheckCircle2, ChevronRight, Eye, Sparkles, ShieldCheck, Ruler, ArrowDown } from 'lucide-react';
+import { Layers, CheckCircle2, ChevronRight, ArrowDown } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -53,9 +53,9 @@ const STAGES = [
     stage: 5,
     title: "Kinetic Halo Banner & Monolithic Reception",
     subtitle: "PHASE 05 // BRANDING & IDENTITY",
-    description: "Suspended 5.2m circular kinetic halo ring, 3D backlit acrylic monogram logo, champagne gold reception counter, and dual interactive demo kiosks.",
-    specs: ["Halo: 5.2m Revolving Ring", "Counter: Monolithic Champagne Gold", "Logo: 3D Halo Backlit Acrylic"],
-    code: "BRAND_ILLUMINATION_100% // DMX SYNC"
+    description: "Suspended 5.2m circular kinetic halo ring, 3D acrylic monogram logo, reception counter in graphite and stone, and dual interactive demo kiosks.",
+    specs: ["Halo: 5.2m Revolving Ring", "Counter: Monolithic Graphite & Stone", "Logo: Dimensional Acrylic"],
+    code: "BRAND_IDENTITY // COMPLIANT"
   },
   {
     number: "06",
@@ -64,7 +64,7 @@ const STAGES = [
     subtitle: "PHASE 06 // TURNKEY EXECUTION",
     description: "360° motorized revolving centerpiece turntable, executive VIP lounge armchairs, tempered glass discussion tables, preserved moss greenery, and final ISO 9001 sign-off.",
     specs: ["Lounge: 8-person executive pod", "Turntable: 360° Motorized base", "Handover: 18h Pre-Show Ahead"],
-    code: "FINAL_HANDOVER_COMPLETE // ISO 9001 AUDIT"
+    code: "FINAL_HANDOVER_COMPLETE // ISO 9001"
   }
 ];
 
@@ -75,7 +75,6 @@ export default function StorySection({ content }: StorySectionProps) {
 
   const containerRef = useRef<HTMLDivElement>(null);
   const pinRef = useRef<HTMLDivElement>(null);
-  const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -115,25 +114,24 @@ export default function StorySection({ content }: StorySectionProps) {
     <section 
       id="story" 
       ref={containerRef}
-      className="relative bg-[#07070a] border-t border-white/[0.08]"
-      style={{ height: '450vh' }} // Extended height for buttery smooth GSAP scroll travel
+      className="relative bg-[#202522] border-t border-[#292B28] text-[#FFFFFF]"
+      style={{ height: '420vh' }}
     >
       {/* Sticky Pinned Canvas Container */}
       <div 
         ref={pinRef}
         className="sticky top-0 h-screen w-full flex flex-col justify-between overflow-hidden"
       >
-        {/* Background Subtle Architectural Atmosphere */}
-        <div className="absolute inset-0 architectural-grid opacity-20 pointer-events-none" />
+        {/* Subtle Dark Architectural Grid */}
+        <div className="absolute inset-0 architectural-grid-dark opacity-20 pointer-events-none" />
 
         {/* Top Header HUD Information Overlay */}
         <div className="relative z-20 max-w-7xl mx-auto px-6 w-full pt-20 md:pt-24 flex items-center justify-between">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-300 text-xs font-mono uppercase tracking-widest mb-1.5">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{content.story_section_badge || 'THE 3D FABRICATION STORY'}</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#292B28] border border-[#777B70]/40 text-[#D6D1C5] text-xs font-mono uppercase tracking-widest mb-1.5">
+              <span>{content.story_section_badge || '3D FABRICATION STORY'}</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#FFFFFF] tracking-tight">
               {content.story_section_title || 'THE ANATOMY OF A BESPOKE STALL'}
             </h2>
           </div>
@@ -142,26 +140,26 @@ export default function StorySection({ content }: StorySectionProps) {
           <div className="flex items-center gap-3">
             <button
               onClick={() => setWireframe(!wireframe)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider transition-all border backdrop-blur-md flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded text-xs font-mono uppercase tracking-wider transition-colors border flex items-center gap-1.5 ${
                 wireframe
-                  ? 'bg-amber-400 text-black border-amber-300 font-bold'
-                  : 'bg-black/60 text-neutral-300 border-white/10 hover:text-white'
+                  ? 'bg-[#C65D36] text-[#FFFFFF] border-[#C65D36] font-medium'
+                  : 'bg-[#292B28] text-[#D6D1C5] border-[#777B70]/40 hover:text-[#FFFFFF]'
               }`}
             >
               <Layers className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">{wireframe ? 'CAD Wireframe' : 'PBR Render'}</span>
+              <span className="hidden sm:inline">{wireframe ? 'CAD Wireframe' : 'PBR Model'}</span>
             </button>
 
             {/* Stage Selector Pills */}
-            <div className="hidden md:flex items-center gap-1 p-1 rounded-full bg-black/60 border border-white/10 backdrop-blur-md">
+            <div className="hidden md:flex items-center gap-1 p-1 rounded bg-[#292B28] border border-[#777B70]/40">
               {STAGES.map((s) => (
                 <button
                   key={s.number}
                   onClick={() => handleJumpToStage(s.stage)}
-                  className={`px-3 py-1 rounded-full text-xs font-mono transition-all flex items-center gap-1 ${
+                  className={`px-3 py-1 rounded text-xs font-mono transition-colors flex items-center gap-1 ${
                     activeStage === s.stage
-                      ? 'bg-amber-400 text-black font-bold shadow-md shadow-amber-400/30'
-                      : 'text-neutral-400 hover:text-white'
+                      ? 'bg-[#C65D36] text-[#FFFFFF] font-bold'
+                      : 'text-[#D6D1C5] hover:text-[#FFFFFF]'
                   }`}
                 >
                   <span>{s.number}</span>
@@ -184,31 +182,28 @@ export default function StorySection({ content }: StorySectionProps) {
         {/* Bottom Floating Architectural Card & Progress HUD */}
         <div className="relative z-20 max-w-7xl mx-auto px-6 w-full pb-8 md:pb-12 pointer-events-none">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
-            {/* Stage Description Architectural Card (7 cols) */}
-            <div 
-              ref={cardRef}
-              className="lg:col-span-7 pointer-events-auto p-6 md:p-8 rounded-2xl bg-[#0c0c12]/92 border border-white/10 backdrop-blur-xl shadow-2xl space-y-4"
-            >
-              <div className="flex items-center justify-between border-b border-white/10 pb-3">
+            {/* Stage Description Card (7 cols) */}
+            <div className="lg:col-span-7 pointer-events-auto p-6 md:p-8 rounded-xl bg-[#202522]/95 border border-[#777B70]/30 shadow-xl space-y-4">
+              <div className="flex items-center justify-between border-b border-[#777B70]/30 pb-3">
                 <div className="flex items-center gap-3">
-                  <span className="px-3 py-1 rounded bg-amber-400/20 text-amber-300 font-mono font-bold text-sm">
+                  <span className="px-2.5 py-1 rounded bg-[#C65D36] text-[#FFFFFF] font-mono font-bold text-xs">
                     STAGE {currentStageData.number} / 06
                   </span>
-                  <span className="text-xs uppercase font-mono tracking-widest text-neutral-400">
+                  <span className="text-xs uppercase font-mono tracking-widest text-[#D6D1C5]">
                     {currentStageData.subtitle}
                   </span>
                 </div>
-                <div className="flex items-center gap-1 text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
-                  <CheckCircle2 className="w-3.5 h-3.5" />
+                <div className="flex items-center gap-1 text-[11px] font-mono text-[#D6D1C5] bg-[#292B28] px-2.5 py-0.5 rounded border border-[#777B70]/30">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C65D36]" />
                   <span>{currentStageData.code}</span>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-2">
+                <h3 className="text-xl md:text-2xl font-bold text-[#FFFFFF] tracking-tight mb-2">
                   {currentStageData.title}
                 </h3>
-                <p className="text-sm md:text-base text-neutral-300 leading-relaxed font-light">
+                <p className="text-sm md:text-base text-[#D6D1C5] leading-relaxed font-light">
                   {currentStageData.description}
                 </p>
               </div>
@@ -218,7 +213,7 @@ export default function StorySection({ content }: StorySectionProps) {
                 {currentStageData.specs.map((spec, i) => (
                   <span 
                     key={i} 
-                    className="px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-xs font-mono text-neutral-300"
+                    className="px-3 py-1 rounded bg-[#292B28] border border-[#777B70]/30 text-xs font-mono text-[#D6D1C5]"
                   >
                     {spec}
                   </span>
@@ -228,25 +223,25 @@ export default function StorySection({ content }: StorySectionProps) {
 
             {/* Right: Vertical Progress Meter & Timeline Scrub (5 cols) */}
             <div className="lg:col-span-5 pointer-events-auto flex flex-col justify-end space-y-3">
-              <div className="p-4 rounded-xl bg-black/70 border border-white/10 backdrop-blur-md flex items-center justify-between text-xs font-mono text-neutral-400">
+              <div className="p-4 rounded-xl bg-[#202522]/95 border border-[#777B70]/30 flex items-center justify-between text-xs font-mono text-[#D6D1C5]">
                 <div className="flex items-center gap-2">
-                  <ArrowDown className="w-3.5 h-3.5 text-amber-400 animate-bounce" />
-                  <span>SCROLL TIMELINE PROGRESS</span>
+                  <ArrowDown className="w-3.5 h-3.5 text-[#C65D36] animate-bounce" />
+                  <span>FABRICATION PROGRESS</span>
                 </div>
-                <span className="text-amber-400 font-bold font-mono">
+                <span className="text-[#C65D36] font-bold font-mono">
                   {Math.round(scrollProgress * 100)}%
                 </span>
               </div>
 
-              {/* Step indicator bar */}
-              <div className="h-2 w-full rounded-full bg-neutral-800 overflow-hidden">
+              {/* Step indicator bar - Solid Burnt Orange */}
+              <div className="h-1.5 w-full rounded bg-[#292B28] overflow-hidden">
                 <div 
-                  className="h-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-300 transition-all duration-150 rounded-full"
+                  className="h-full bg-[#C65D36] transition-all duration-150 rounded"
                   style={{ width: `${Math.max(16, scrollProgress * 100)}%` }}
                 />
               </div>
 
-              <div className="flex justify-between text-[10px] font-mono text-neutral-500 uppercase">
+              <div className="flex justify-between text-[10px] font-mono text-[#777B70] uppercase">
                 <span>01 Grid</span>
                 <span>02 Truss</span>
                 <span>03 Mezzanine</span>

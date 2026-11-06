@@ -1,40 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #08080a;
-  --foreground: #f3f3f5;
-  --surface: #101015;
-  --surface-raised: #16161d;
-  --card-border: rgba(255, 255, 255, 0.08);
-  --gold: #d4af37;
-  --gold-light: #f3e5ab;
-  --gold-dark: #997d26;
-  --champagne: #c5a880;
-  --graphite: #181822;
+  --background: #F2EFE8;
+  --foreground: #292B28;
+  --graphite: #202522;
+  --warm-ivory: #F2EFE8;
+  --stone: #D6D1C5;
+  --burnt-orange: #C65D36;
+  --concrete: #777B70;
+  --pure-white: #FFFFFF;
+  --dark-text: #292B28;
+  --card-border: rgba(119, 123, 112, 0.22);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-surface: var(--surface);
-  --color-surface-raised: var(--surface-raised);
-  --color-gold: var(--gold);
-  --color-champagne: var(--champagne);
   --color-graphite: var(--graphite);
+  --color-warm-ivory: var(--warm-ivory);
+  --color-stone: var(--stone);
+  --color-burnt-orange: var(--burnt-orange);
+  --color-concrete: var(--concrete);
+  --color-pure-white: var(--pure-white);
+  --color-dark-text: var(--dark-text);
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--warm-ivory);
+  color: var(--dark-text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
-  selection-background-color: #d4af37;
-  selection-color: #08080a;
 }
 
 ::selection {
-  background: #d4af37;
-  color: #08080a;
+  background: #C65D36;
+  color: #FFFFFF;
 }
 
 /* Lenis smooth scrolling */
@@ -58,57 +58,47 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
-/* Custom architectural scrollbar */
+/* Architectural restrained scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #08080a;
+  background: #F2EFE8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #252530;
+  background: #D6D1C5;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c5a880;
+  background: #777B70;
 }
 
-/* Grid & texture utilities */
+/* Architectural grid utilities with subtle hairlines */
 .architectural-grid {
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(41, 43, 40, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(41, 43, 40, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
-.architectural-dots {
-  background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px);
-  background-size: 32px 32px;
+.architectural-grid-dark {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
-.glass-panel {
-  background: rgba(16, 16, 22, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+/* Subtle clean card container */
+.architectural-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(119, 123, 112, 0.22);
 }
 
-.gold-gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #f3e5ab 50%, #d4af37 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.champagne-gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #e8d7c1 40%, #c5a880 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gold-border-glow {
-  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.2);
+.architectural-card-dark {
+  background-color: #202522;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }

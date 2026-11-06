@@ -13,7 +13,7 @@ interface TiltCardProps {
 export default function TiltCard({
   children,
   className = '',
-  glowColor = 'rgba(212, 175, 55, 0.15)',
+  glowColor = 'rgba(198, 93, 54, 0.08)',
   maxTilt = 8,
   onClick
 }: TiltCardProps) {

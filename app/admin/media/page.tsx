@@ -81,19 +81,19 @@ export default function MediaLibraryPage() {
   return (
     <div className="space-y-8">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#777B70]/20">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-black text-[#202522] tracking-tight">
             Media Asset Library
           </h1>
-          <p className="text-xs font-mono text-neutral-400 mt-1">
+          <p className="text-xs font-mono text-[#777B70] mt-1">
             Central repository for architectural photography, renders, and exhibition graphics.
           </p>
         </div>
 
         <button
           onClick={() => setIsModalOpen(true)}
-          className="px-5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2 active:scale-95"
+          className="px-5 py-2.5 rounded-xl bg-[#C65D36] hover:bg-[#B34E28] text-white font-bold text-xs font-mono uppercase tracking-wider transition-colors flex items-center gap-2 active:scale-95 shadow-sm"
         >
           <Plus className="w-4 h-4" />
           <span>Add Media Asset</span>
@@ -101,18 +101,18 @@ export default function MediaLibraryPage() {
       </div>
 
       {/* Search & Stats */}
-      <div className="p-4 rounded-2xl bg-[#0f0f16] border border-white/10 flex items-center justify-between gap-4">
+      <div className="p-4 rounded-2xl bg-white border border-[#777B70]/20 shadow-sm flex items-center justify-between gap-4">
         <div className="relative w-full max-w-sm">
-          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500" />
+          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#777B70]" />
           <input
             type="text"
             placeholder="Search media by title or tag..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400"
+            className="w-full pl-10 pr-4 py-2 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-xs text-[#292B28] placeholder-[#777B70] focus:outline-none focus:border-[#C65D36]"
           />
         </div>
-        <div className="text-xs font-mono text-neutral-400">
+        <div className="text-xs font-mono text-[#777B70]">
           Assets: {media.length} items
         </div>
       </div>
@@ -122,9 +122,9 @@ export default function MediaLibraryPage() {
         {filteredMedia.map((asset) => (
           <div
             key={asset.id}
-            className="group relative rounded-2xl bg-[#0c0c12] border border-white/10 hover:border-amber-400/40 transition-all overflow-hidden flex flex-col justify-between"
+            className="group relative rounded-2xl bg-white border border-[#777B70]/20 hover:border-[#C65D36] shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col justify-between"
           >
-            <div className="relative aspect-[4/3] bg-neutral-900 overflow-hidden">
+            <div className="relative aspect-[4/3] bg-neutral-200 overflow-hidden">
               <img
                 src={asset.url}
                 alt={asset.alt_text || asset.title}
@@ -133,7 +133,7 @@ export default function MediaLibraryPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3 justify-between">
                 <button
                   onClick={() => setSelectedAsset(asset)}
-                  className="p-1.5 rounded-lg bg-black/60 text-white hover:bg-black/90"
+                  className="p-1.5 rounded-lg bg-white/90 text-[#202522] hover:bg-white"
                   title="Enlarge preview"
                 >
                   <Eye className="w-4 h-4" />
@@ -141,14 +141,14 @@ export default function MediaLibraryPage() {
                 <div className="flex gap-1.5">
                   <button
                     onClick={() => handleCopyUrl(asset.url, asset.id)}
-                    className="p-1.5 rounded-lg bg-amber-400 text-black hover:bg-amber-300 font-semibold"
+                    className="p-1.5 rounded-lg bg-[#C65D36] text-white hover:bg-[#B34E28] font-semibold"
                     title="Copy URL"
                   >
                     {copiedId === asset.id ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   </button>
                   <button
                     onClick={() => handleDelete(asset.id)}
-                    className="p-1.5 rounded-lg bg-red-500 text-white hover:bg-red-600"
+                    className="p-1.5 rounded-lg bg-red-600 text-white hover:bg-red-700"
                     title="Delete asset"
                   >
                     <Trash2 className="w-4 h-4" />
@@ -158,8 +158,8 @@ export default function MediaLibraryPage() {
             </div>
 
             <div className="p-3.5 space-y-1">
-              <div className="text-xs font-semibold text-white truncate">{asset.title}</div>
-              <div className="flex items-center justify-between text-[10px] font-mono text-neutral-500">
+              <div className="text-xs font-semibold text-[#202522] truncate">{asset.title}</div>
+              <div className="flex items-center justify-between text-[10px] font-mono text-[#777B70]">
                 <span>{asset.category}</span>
                 <span>{asset.file_size || '2.0 MB'}</span>
               </div>
@@ -170,46 +170,46 @@ export default function MediaLibraryPage() {
 
       {/* Add Media Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl">
-          <div className="relative w-full max-w-lg bg-[#0d0d14] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-6">
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <h3 className="text-lg font-bold text-white tracking-tight">Add Media Asset</h3>
-              <button onClick={() => setIsModalOpen(false)} className="p-2 text-neutral-400 hover:text-white">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md">
+          <div className="relative w-full max-w-lg bg-white border border-[#777B70]/30 rounded-2xl p-6 sm:p-8 space-y-6 text-[#292B28] shadow-2xl">
+            <div className="flex items-center justify-between border-b border-[#777B70]/15 pb-4">
+              <h3 className="text-lg font-bold text-[#202522] tracking-tight">Add Media Asset</h3>
+              <button onClick={() => setIsModalOpen(false)} className="p-2 text-[#777B70] hover:text-[#202522]">
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             <form onSubmit={handleAddMedia} className="space-y-4">
               <div className="space-y-1.5">
-                <label className="text-xs font-mono uppercase text-neutral-400 block">Asset Title *</label>
+                <label className="text-xs font-mono uppercase text-[#777B70] block">Asset Title *</label>
                 <input
                   type="text"
                   required
                   value={formData.title}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                   placeholder="e.g. Frankfurt CPHI Booth Main Angle"
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-amber-400"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36]"
                 />
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-mono uppercase text-neutral-400 block">Direct Image URL *</label>
+                <label className="text-xs font-mono uppercase text-[#777B70] block">Direct Image URL *</label>
                 <input
                   type="text"
                   required
                   value={formData.url}
                   onChange={(e) => setFormData({ ...formData, url: e.target.value })}
                   placeholder="https://images.unsplash.com/..."
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-neutral-300 font-mono text-xs focus:outline-none focus:border-amber-400"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] font-mono text-xs focus:outline-none focus:border-[#C65D36]"
                 />
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-mono uppercase text-neutral-400 block">Category</label>
+                <label className="text-xs font-mono uppercase text-[#777B70] block">Category</label>
                 <select
                   value={formData.category}
                   onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#111118] border border-white/10 text-white text-xs font-mono"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-xs font-mono focus:outline-none focus:border-[#C65D36]"
                 >
                   <option value="Projects">Projects</option>
                   <option value="Retail">Retail</option>
@@ -220,27 +220,27 @@ export default function MediaLibraryPage() {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-mono uppercase text-neutral-400 block">Alt Text (Accessibility & SEO)</label>
+                <label className="text-xs font-mono uppercase text-[#777B70] block">Alt Text (Accessibility & SEO)</label>
                 <input
                   type="text"
                   value={formData.alt_text}
                   onChange={(e) => setFormData({ ...formData, alt_text: e.target.value })}
                   placeholder="Descriptive architectural alt text..."
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36]"
                 />
               </div>
 
-              <div className="flex justify-end gap-3 pt-4 border-t border-white/10">
+              <div className="flex justify-end gap-3 pt-4 border-t border-[#777B70]/15">
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-2 rounded-xl bg-white/5 text-neutral-400 text-xs font-mono uppercase"
+                  className="px-4 py-2 rounded-xl bg-[#F2EFE8] text-[#777B70] hover:bg-[#D6D1C5] text-xs font-mono uppercase"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-2 rounded-xl bg-amber-400 text-black font-bold text-xs font-mono uppercase"
+                  className="px-6 py-2 rounded-xl bg-[#C65D36] hover:bg-[#B34E28] text-white font-bold text-xs font-mono uppercase shadow-sm"
                 >
                   Add Asset
                 </button>
@@ -252,14 +252,14 @@ export default function MediaLibraryPage() {
 
       {/* Asset Full Preview Modal */}
       {selectedAsset && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/90 backdrop-blur-2xl" onClick={() => setSelectedAsset(null)}>
-          <div className="relative max-w-4xl max-h-[85vh] bg-[#0c0c12] border border-white/10 rounded-2xl overflow-hidden p-4 space-y-4" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/75 backdrop-blur-md" onClick={() => setSelectedAsset(null)}>
+          <div className="relative max-w-4xl max-h-[85vh] bg-white border border-[#777B70]/30 rounded-2xl overflow-hidden p-4 space-y-4 shadow-2xl" onClick={(e) => e.stopPropagation()}>
             <img src={selectedAsset.url} alt={selectedAsset.title} className="max-h-[60vh] w-auto mx-auto rounded-xl object-contain" />
-            <div className="flex items-center justify-between text-xs font-mono pt-2 border-t border-white/10">
-              <span className="text-white font-bold">{selectedAsset.title}</span>
+            <div className="flex items-center justify-between text-xs font-mono pt-2 border-t border-[#777B70]/15">
+              <span className="text-[#202522] font-bold">{selectedAsset.title}</span>
               <button
                 onClick={() => handleCopyUrl(selectedAsset.url, selectedAsset.id)}
-                className="px-3 py-1.5 rounded-lg bg-amber-400 text-black font-semibold flex items-center gap-1.5"
+                className="px-3 py-1.5 rounded-lg bg-[#C65D36] hover:bg-[#B34E28] text-white font-semibold flex items-center gap-1.5 transition-colors shadow-sm"
               >
                 <Copy className="w-3.5 h-3.5" />
                 <span>{copiedId === selectedAsset.id ? 'Copied' : 'Copy URL'}</span>
@@ -271,4 +271,3 @@ export default function MediaLibraryPage() {
     </div>
   );
 }
-

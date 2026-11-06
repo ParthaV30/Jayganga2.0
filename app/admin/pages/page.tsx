@@ -46,19 +46,19 @@ export default function PagesManagementPage() {
   return (
     <div className="space-y-8">
       {/* Top Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#777B70]/20">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-black text-[#202522] tracking-tight">
             Page Management
           </h1>
-          <p className="text-xs font-mono text-neutral-400 mt-1">
+          <p className="text-xs font-mono text-[#777B70] mt-1">
             Customize inner pages: About, Services, and Contact headers, imagery, and SEO metadata.
           </p>
         </div>
 
         <div className="flex items-center gap-3">
           {saveSuccess && (
-            <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-lg border border-emerald-500/30">
+            <div className="flex items-center gap-2 text-xs font-mono text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-300">
               <Check className="w-3.5 h-3.5" />
               <span>Page Updated</span>
             </div>
@@ -67,7 +67,7 @@ export default function PagesManagementPage() {
           <button
             onClick={handleSave}
             disabled={isSaving}
-            className="px-6 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2 active:scale-95 disabled:opacity-50"
+            className="px-6 py-2.5 rounded-xl bg-[#C65D36] hover:bg-[#B34E28] text-white font-bold text-xs font-mono uppercase tracking-wider transition-colors flex items-center gap-2 active:scale-95 disabled:opacity-50 shadow-sm"
           >
             {isSaving ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
             <span>{isSaving ? 'Saving...' : 'Save Page'}</span>
@@ -76,15 +76,15 @@ export default function PagesManagementPage() {
       </div>
 
       {/* Page Selector Tabs */}
-      <div className="flex gap-2 p-1.5 rounded-2xl bg-[#0c0c12] border border-white/10 w-fit">
+      <div className="flex gap-2 p-1.5 rounded-2xl bg-white border border-[#777B70]/20 shadow-sm w-fit">
         {PAGES.map(slug => (
           <button
             key={slug}
             onClick={() => setSelectedSlug(slug)}
             className={`px-5 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all ${
               selectedSlug === slug
-                ? 'bg-amber-400 text-black font-bold shadow-md shadow-amber-400/20'
-                : 'text-neutral-400 hover:text-white hover:bg-white/5'
+                ? 'bg-[#C65D36] text-white font-bold shadow-sm'
+                : 'text-[#777B70] hover:text-[#202522] hover:bg-[#F2EFE8]'
             }`}
           >
             /{slug} Page
@@ -94,99 +94,99 @@ export default function PagesManagementPage() {
 
       {/* Editor Form */}
       {isLoading ? (
-        <div className="py-20 text-center font-mono text-amber-400 text-sm">
+        <div className="py-20 text-center font-mono text-[#C65D36] text-sm">
           Loading page data...
         </div>
       ) : (
         <form onSubmit={handleSave} className="space-y-8">
-          <div className="p-6 sm:p-8 rounded-2xl bg-[#0c0c12] border border-white/10 space-y-6">
-            <div className="border-b border-white/10 pb-4">
-              <h2 className="text-lg font-bold text-white tracking-tight flex items-center gap-2">
-                <FileText className="w-4 h-4 text-amber-400" />
+          <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[#777B70]/20 shadow-sm space-y-6">
+            <div className="border-b border-[#777B70]/15 pb-4">
+              <h2 className="text-lg font-bold text-[#202522] tracking-tight flex items-center gap-2">
+                <FileText className="w-4 h-4 text-[#C65D36]" />
                 <span>/{selectedSlug.toUpperCase()} Header & Narrative Content</span>
               </h2>
             </div>
 
             <div className="grid grid-cols-1 gap-6">
               <div className="space-y-2">
-                <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                   Page Hero Title
                 </label>
                 <input
                   type="text"
                   value={pageData.hero_title}
                   onChange={(e) => handleChange('hero_title', e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-amber-400 font-bold"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36] font-bold"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                   Page Hero Subtitle
                 </label>
                 <textarea
                   rows={2}
                   value={pageData.hero_subtitle}
                   onChange={(e) => handleChange('hero_subtitle', e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-amber-400"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36]"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                   Banner Architectural Image URL
                 </label>
                 <input
                   type="text"
                   value={pageData.banner_image || ''}
                   onChange={(e) => handleChange('banner_image', e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-neutral-300 text-sm focus:outline-none focus:border-amber-400 font-mono"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36] font-mono"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                   Body Architectural Content / Narrative
                 </label>
                 <textarea
                   rows={5}
                   value={pageData.body_content || ''}
                   onChange={(e) => handleChange('body_content', e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-amber-400"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36]"
                 />
               </div>
             </div>
           </div>
 
-          <div className="p-6 sm:p-8 rounded-2xl bg-[#0c0c12] border border-white/10 space-y-6">
-            <div className="border-b border-white/10 pb-4">
-              <h2 className="text-lg font-bold text-white tracking-tight">
+          <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[#777B70]/20 shadow-sm space-y-6">
+            <div className="border-b border-[#777B70]/15 pb-4">
+              <h2 className="text-lg font-bold text-[#202522] tracking-tight">
                 SEO & OpenGraph Metadata for /{selectedSlug}
               </h2>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                   Meta Title
                 </label>
                 <input
                   type="text"
                   value={pageData.meta_title || ''}
                   onChange={(e) => handleChange('meta_title', e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36]"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-mono uppercase tracking-wider text-neutral-400 block">
+                <label className="text-xs font-mono uppercase tracking-wider text-[#777B70] block">
                   Meta Description
                 </label>
                 <input
                   type="text"
                   value={pageData.meta_description || ''}
                   onChange={(e) => handleChange('meta_description', e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] text-sm focus:outline-none focus:border-[#C65D36]"
                 />
               </div>
             </div>
@@ -196,7 +196,7 @@ export default function PagesManagementPage() {
             <button
               type="submit"
               disabled={isSaving}
-              className="px-8 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2 active:scale-95 disabled:opacity-50"
+              className="px-8 py-3.5 rounded-xl bg-[#C65D36] hover:bg-[#B34E28] text-white font-bold text-xs font-mono uppercase tracking-wider transition-colors flex items-center gap-2 active:scale-95 disabled:opacity-50 shadow-sm"
             >
               {isSaving ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
               <span>{isSaving ? 'Saving...' : 'Save Page Content'}</span>
@@ -207,4 +207,3 @@ export default function PagesManagementPage() {
     </div>
   );
 }
-

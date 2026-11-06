@@ -13,14 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#08080a",
+  themeColor: "#202522",
   width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
-  title: "AURA FORGE | Bespoke 3D Stall Fabrication & Exhibition Architecture",
-  description: "Premier exhibition stall design, custom fabrication, and turnkey execution company creating world-class architectural brand experiences for international trade shows.",
+  title: "AURA FORGE | Architectural Stall Fabrication & Exhibition Solutions",
+  description: "Established international exhibition stall design, precision fabrication, and turnkey execution company creating world-class architectural brand environments.",
   keywords: [
     "Stall Fabrication",
     "Exhibition Booth Design",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "AURA FORGE Spatial Architecture" }],
   openGraph: {
-    title: "AURA FORGE | Bespoke 3D Stall Fabrication & Exhibition Architecture",
+    title: "AURA FORGE | Architectural Stall Fabrication & Exhibition Solutions",
     description: "Transforming empty exhibition concrete into extraordinary brand experiences through precision engineering and turnkey execution.",
     type: "website",
     locale: "en_US",
@@ -49,9 +49,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#08080a] text-neutral-100 selection:bg-amber-400 selection:text-black">
+      <body className="min-h-full flex flex-col bg-[#F2EFE8] text-[#292B28] selection:bg-[#C65D36] selection:text-white">
         {children}
       </body>
     </html>

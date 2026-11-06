@@ -2,11 +2,11 @@
 
 import React, { Suspense, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, ContactShadows, Float, Environment } from '@react-three/drei';
+import { OrbitControls, ContactShadows, Float } from '@react-three/drei';
 import * as THREE from 'three';
 import ProceduralStall from './ProceduralStall';
 import CanvasLoader from './CanvasLoader';
-import { Eye, Layers, Compass, Maximize2, Sparkles, Box } from 'lucide-react';
+import { Layers } from 'lucide-react';
 
 const CAMERA_PRESETS: Record<string, { pos: [number, number, number]; target: [number, number, number] }> = {
   isometric: { pos: [7.2, 5.0, 9.2], target: [0, 1.0, 0] },
@@ -31,10 +31,9 @@ function SmoothCameraController({
     const targetPos = new THREE.Vector3(...targetConfig.pos);
     const targetLook = new THREE.Vector3(...targetConfig.target);
 
-    // Subtle pointer parallax
     const { x, y } = state.pointer;
-    targetPos.x += x * 1.2;
-    targetPos.y += -y * 0.8;
+    targetPos.x += x * 1.0;
+    targetPos.y += -y * 0.6;
 
     state.camera.position.lerp(targetPos, delta * 2.5);
     currentLookAt.current.lerp(targetLook, delta * 2.5);
@@ -56,19 +55,19 @@ export default function HeroStallCanvas() {
         {/* Render Mode Toggle */}
         <button
           onClick={() => setWireframe(!wireframe)}
-          className={`px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase tracking-wider transition-all flex items-center gap-1.5 border backdrop-blur-md ${
+          className={`px-3 py-1.5 rounded text-[11px] font-mono uppercase tracking-wider transition-colors flex items-center gap-1.5 border ${
             wireframe
-              ? 'bg-amber-400 text-black border-amber-300 font-bold shadow-lg shadow-amber-400/20'
-              : 'bg-black/60 text-neutral-300 border-white/10 hover:text-white hover:bg-white/10'
+              ? 'bg-[#C65D36] text-[#FFFFFF] border-[#C65D36] font-medium'
+              : 'bg-[#FFFFFF] text-[#292B28] border-[#777B70]/30 hover:bg-[#D6D1C5]'
           }`}
-          title="Toggle Architectural Wireframe / CAD Mode"
+          title="Toggle Architectural CAD Wireframe Mode"
         >
           <Layers className="w-3.5 h-3.5" />
-          <span>{wireframe ? 'CAD Wireframe' : 'Photorealistic PBR'}</span>
+          <span>{wireframe ? 'CAD Wireframe' : 'PBR Model'}</span>
         </button>
 
         {/* View Angle Presets */}
-        <div className="hidden sm:flex items-center gap-1 p-1 rounded-lg bg-black/60 border border-white/10 backdrop-blur-md text-[11px] font-mono">
+        <div className="hidden sm:flex items-center gap-1 p-0.5 rounded bg-[#FFFFFF] border border-[#777B70]/30 text-[11px] font-mono">
           {(['isometric', 'mezzanine', 'truss', 'topdown'] as const).map((key) => (
             <button
               key={key}
@@ -76,10 +75,10 @@ export default function HeroStallCanvas() {
                 setActivePreset(key);
                 setIsInteracting(false);
               }}
-              className={`px-2.5 py-1 rounded-md uppercase transition-all ${
+              className={`px-2.5 py-1 rounded uppercase transition-colors ${
                 activePreset === key
-                  ? 'bg-white/20 text-amber-300 font-bold'
-                  : 'text-neutral-400 hover:text-white'
+                  ? 'bg-[#202522] text-[#FFFFFF] font-medium'
+                  : 'text-[#777B70] hover:text-[#292B28]'
               }`}
             >
               {key === 'isometric' ? 'Orbit' : key}
@@ -88,10 +87,10 @@ export default function HeroStallCanvas() {
         </div>
       </div>
 
-      {/* Viewport Technical Status Pill (Right Top) */}
-      <div className="absolute top-4 right-4 z-20 hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/60 border border-white/10 backdrop-blur-md text-[10px] font-mono text-neutral-400 pointer-events-none">
-        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-        <span>R3F // 60 FPS ENGINE</span>
+      {/* Viewport Status Pill (Right Top) */}
+      <div className="absolute top-4 right-4 z-20 hidden md:flex items-center gap-2 px-3 py-1.5 rounded bg-[#FFFFFF] border border-[#777B70]/30 text-[10px] font-mono text-[#777B70] pointer-events-none">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#C65D36]" />
+        <span>R3F // ARCHITECTURAL CANVAS</span>
       </div>
 
       {/* Main 3D WebGL Canvas */}
@@ -107,14 +106,14 @@ export default function HeroStallCanvas() {
           dpr={[1, 1.8]}
         >
           <Suspense fallback={<CanvasLoader />}>
-            {/* Cinematic Lighting Rig */}
-            <ambientLight intensity={0.4} />
+            {/* Natural Architectural Studio Lighting */}
+            <ambientLight intensity={0.65} color="#FAF8F5" />
 
-            {/* Main Key Sun / Warm Lighting */}
+            {/* Main Key Studio Light */}
             <directionalLight
-              position={[9, 14, 7]}
-              intensity={2.6}
-              color="#fff4e0"
+              position={[8, 14, 7]}
+              intensity={2.2}
+              color="#FFFFFF"
               castShadow
               shadow-mapSize-width={2048}
               shadow-mapSize-height={2048}
@@ -126,27 +125,26 @@ export default function HeroStallCanvas() {
               shadow-bias={-0.0001}
             />
 
-            {/* Cool Fill Sky Light */}
+            {/* Soft Fill Light */}
             <directionalLight
-              position={[-9, 7, -6]}
-              intensity={0.9}
-              color="#8baed6"
+              position={[-8, 6, -6]}
+              intensity={0.6}
+              color="#F2EFE8"
             />
 
-            {/* Rear Gold Architectural Rim Light */}
+            {/* Subtle Neutral Backlight */}
             <pointLight
-              position={[0, 9, -5]}
-              intensity={3.0}
-              color="#d4af37"
-              distance={20}
+              position={[0, 8, -5]}
+              intensity={1.2}
+              color="#FFFFFF"
+              distance={18}
             />
 
-            {/* Floating Dynamic Model */}
             <Float
-              speed={1.2}
-              rotationIntensity={0.12}
-              floatIntensity={0.2}
-              floatingRange={[-0.08, 0.08]}
+              speed={1.0}
+              rotationIntensity={0.08}
+              floatIntensity={0.15}
+              floatingRange={[-0.06, 0.06]}
             >
               <ProceduralStall 
                 isHero={true} 
@@ -156,14 +154,14 @@ export default function HeroStallCanvas() {
               />
             </Float>
 
-            {/* Realistic Contact Floor Shadow */}
+            {/* Neutral Floor Contact Shadow */}
             <ContactShadows
               position={[0, -1.21, 0]}
-              opacity={0.88}
+              opacity={0.65}
               scale={20}
               blur={2.5}
               far={5}
-              color="#000000"
+              color="#202522"
             />
 
             <SmoothCameraController 
@@ -171,13 +169,12 @@ export default function HeroStallCanvas() {
               userInteracting={isInteracting} 
             />
 
-            {/* Interactive Orbit Controls with smooth damping */}
             <OrbitControls
               enableZoom={false}
               enablePan={false}
               maxPolarAngle={Math.PI / 2.05}
               minPolarAngle={Math.PI / 5}
-              rotateSpeed={0.65}
+              rotateSpeed={0.6}
               dampingFactor={0.05}
               onStart={() => setIsInteracting(true)}
             />
@@ -185,10 +182,10 @@ export default function HeroStallCanvas() {
         </Canvas>
       </div>
 
-      {/* Bottom Architectural Framing Coordinate Tickers */}
-      <div className="absolute bottom-3 left-4 right-4 z-20 flex items-center justify-between pointer-events-none text-[10px] font-mono text-neutral-500">
+      {/* Bottom Technical Tickers */}
+      <div className="absolute bottom-3 left-4 right-4 z-20 flex items-center justify-between pointer-events-none text-[10px] font-mono text-[#777B70]">
         <div>[FOOTPRINT: 9.6M × 7.2M // 2-TIER MEZZANINE]</div>
-        <div className="text-amber-400/80">DRAG TO ORBIT // SCROLL FOR FABRICATION SEQUENCE ↓</div>
+        <div className="text-[#202522]">DRAG TO ROTATE // SCROLL FOR FABRICATION SEQUENCE ↓</div>
         <div>[TOLERANCE: ±0.5MM]</div>
       </div>
     </div>
