@@ -157,3 +157,4 @@ export default function BlogPostClient({ slug }: { slug: string }) {
     </SmoothScroll>
   );
 }
+

@@ -29,3 +29,4 @@ You can create an administrator directly in the Supabase **Authentication** pane
 
 ### 5. Local Storage Fallback Mode
 If Supabase environment variables are not provided, the application automatically runs in **Persistent Local Storage Engine Mode**. All changes in the `/admin` CMS persist in your local browser state, allowing instant testing and demonstrations with zero setup friction!
+

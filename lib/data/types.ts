@@ -184,3 +184,4 @@ export interface PageContent {
   meta_description?: string;
   sections?: Record<string, any>;
 }
+

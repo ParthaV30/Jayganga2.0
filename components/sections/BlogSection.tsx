@@ -107,3 +107,4 @@ export default function BlogSection({ blogs, content }: BlogSectionProps) {
     </section>
   );
 }
+

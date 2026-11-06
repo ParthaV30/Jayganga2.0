@@ -298,3 +298,4 @@ CREATE POLICY "Public read media storage" ON storage.objects FOR SELECT TO anon,
 CREATE POLICY "Admin upload media storage" ON storage.objects FOR INSERT TO authenticated WITH CHECK (bucket_id = 'media');
 CREATE POLICY "Admin update media storage" ON storage.objects FOR UPDATE TO authenticated USING (bucket_id = 'media');
 CREATE POLICY "Admin delete media storage" ON storage.objects FOR DELETE TO authenticated USING (bucket_id = 'media');
+

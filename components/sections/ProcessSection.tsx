@@ -143,3 +143,4 @@ export default function ProcessSection({ content }: ProcessSectionProps) {
     </section>
   );
 }
+

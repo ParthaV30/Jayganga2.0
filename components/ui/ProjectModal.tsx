@@ -180,3 +180,4 @@ export default function ProjectModal({ project, onClose, onEnquire }: ProjectMod
     </div>
   );
 }
+

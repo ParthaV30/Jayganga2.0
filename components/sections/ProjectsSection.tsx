@@ -152,3 +152,4 @@ export default function ProjectsSection({ projects, content, onEnquireProject }:
     </section>
   );
 }
+
