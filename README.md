@@ -1,4 +1,4 @@
-# AURA FORGE — PREMIUM 3D EXHIBITION STALL FABRICATION & CMS
+# Jayganga2.0 — Premium 3D Exhibition Stall Fabrication & Architecture Platform
 
 A complete, production-ready, architectural-grade web platform for an international **Exhibition Stall Fabrication & Spatial Solutions** company.
 
@@ -115,7 +115,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - Navigate to: `http://localhost:3000/admin`
 - Login URL: `http://localhost:3000/admin/login`
 - Standard Demo Credentials:
-  - **Email:** `admin@auraforge-expo.com`
+  - **Email:** `admin@jayganga.com`
   - **Password:** `admin123`
 
 ### 5. Production Build
