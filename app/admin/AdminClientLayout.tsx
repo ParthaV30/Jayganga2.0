@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { 
@@ -91,7 +91,9 @@ export default function AdminClientLayout({ children }: { children: React.ReactN
           <span>Authenticating Jay Ganga Admin Console...</span>
         </div>
         <div className="hidden" aria-hidden="true">
-          {children}
+          <Suspense fallback={null}>
+            {children}
+          </Suspense>
         </div>
       </div>
     );
@@ -233,7 +235,9 @@ export default function AdminClientLayout({ children }: { children: React.ReactN
 
         {/* Children Page Content */}
         <main className="flex-1 p-6 md:p-10 max-w-7xl w-full mx-auto">
-          {children}
+          <Suspense fallback={<div className="p-8 font-mono text-xs text-[#777B70]">Loading admin console...</div>}>
+            {children}
+          </Suspense>
         </main>
       </div>
     </div>
