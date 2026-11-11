@@ -12,25 +12,25 @@ import {
 } from './types';
 
 export const initialSettings: SiteSettings = {
-  company_name: "AURA FORGE",
+  company_name: "JAYGANGA",
   tagline: "Architectural Stall Fabrication & Immersive Exhibition Solutions",
   logo_url: "",
-  email: "connect@auraforge-expo.com",
+  email: "connect@jayganga.com",
   phone: "+91 98201 44552",
   whatsapp: "+91 98201 44552",
   address: "Studio 4B, Industrial Art District, Hubli-Dharwad Expressway / BKC Annexe",
   city: "Mumbai & Bengaluru",
   country: "India / Global Projects",
   google_maps_url: "https://maps.google.com",
-  linkedin_url: "https://linkedin.com/company/auraforge",
-  instagram_url: "https://instagram.com/auraforge.expo",
-  facebook_url: "https://facebook.com/auraforgeexpo",
-  twitter_url: "https://x.com/auraforge",
-  youtube_url: "https://youtube.com/@auraforge",
-  seo_title: "AURA FORGE | Premium 3D Exhibition Stall Fabrication & Architecture",
+  linkedin_url: "https://linkedin.com/company/jayganga",
+  instagram_url: "https://instagram.com/jayganga.expo",
+  facebook_url: "https://facebook.com/jaygangaexpo",
+  twitter_url: "https://x.com/jayganga",
+  youtube_url: "https://youtube.com/@jayganga",
+  seo_title: "JAYGANGA | Premium 3D Exhibition Stall Fabrication & Architecture",
   seo_description: "Premier exhibition stall design, custom fabrication, and turnkey execution company creating world-class architectural brand experiences for international expos.",
   footer_text: "Engineered for distinction. We design, fabricate, and install bespoke exhibition pavilions, modular stall environments, and corporate trade show spaces globally.",
-  copyright_text: "© 2026 AURA FORGE EXHIBITIONS & ARCHITECTURE. All rights reserved."
+  copyright_text: "© 2026 JAYGANGA EXHIBITIONS & ARCHITECTURE. All rights reserved."
 };
 
 export const initialHomepage: HomepageContent = {
@@ -63,7 +63,7 @@ export const initialHomepage: HomepageContent = {
   portfolio_heading: "CURATED PORTFOLIO",
   portfolio_subheading: "WORLD-CLASS ARCHITECTURAL EXHIBITION PAVILIONS",
   why_us_heading: "WHY DISCERNING BRANDS CHOOSE US",
-  why_us_subheading: "THE AURA FORGE ENGINEERING ADVANTAGE",
+  why_us_subheading: "THE JAYGANGA ENGINEERING ADVANTAGE",
   process_heading: "HOW WE BRING VISIONS TO LIFE",
   process_subheading: "OUR FIVE-PHASE TURNKEY DELIVERY LIFECYCLE",
   blog_heading: "INSIGHTS, IDEAS & INSPIRATION",
@@ -386,7 +386,7 @@ Exhibition halls are notoriously noisy. Introducing double-glazed acoustic glass
     published_at: "2026-03-15",
     status: "published",
     read_time: "5 min read",
-    seo_title: "Future of Exhibition Stall Fabrication 2026 | AURA FORGE",
+    seo_title: "Future of Exhibition Stall Fabrication 2026 | JAYGANGA",
     seo_description: "Explore the newest innovations in architectural exhibition booth design, kinetic structures, and LED volumes."
   },
   {
@@ -408,7 +408,7 @@ When planning your international trade show calendar, selecting the right fabric
 * **Speed:** 60% faster setup and dismantle times, reducing hall rental overtime surcharges.
 * **Financial Advantage:** Up to 45% total cost reduction amortized over a 3-year expo cycle.
 
-### The Hybrid Solution: AURA FORGE's Proven Formula
+### The Hybrid Solution: JAYGANGA's Proven Formula
 Most enterprise leaders achieve peak results using our **Hybrid Architectural Model**: an engineered modular core chassis coupled with customized feature woodwork, artisan metal trims, and bespoke reception counters.`,
     featured_image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80",
     category: "Strategy & ROI",
@@ -418,7 +418,7 @@ Most enterprise leaders achieve peak results using our **Hybrid Architectural Mo
     published_at: "2026-02-28",
     status: "published",
     read_time: "6 min read",
-    seo_title: "Modular vs Custom Stall Fabrication Guide | AURA FORGE",
+    seo_title: "Modular vs Custom Stall Fabrication Guide | JAYGANGA",
     seo_description: "Compare cost, timeline, and impact of modular versus bespoke custom exhibition stalls."
   },
   {
@@ -458,7 +458,7 @@ Exhibition halls operate on unforgiving deadlines. If hall doors open at 9:00 AM
     published_at: "2026-01-18",
     status: "published",
     read_time: "4 min read",
-    seo_title: "120-Day Exhibition Stall Execution Timeline | AURA FORGE",
+    seo_title: "120-Day Exhibition Stall Execution Timeline | JAYGANGA",
     seo_description: "Master your exhibition project management with our 120-day timeline checklist."
   },
   {
@@ -468,7 +468,7 @@ Exhibition halls operate on unforgiving deadlines. If hall doors open at 9:00 AM
     excerpt: "How sustainable material science is revolutionizing temporary pavilion fabrication without sacrificing luxury aesthetics.",
     content: `## Transforming Waste into Wonder
 
-Historically, the trade show industry produced staggering quantities of post-event landfill waste. At AURA FORGE, we are spearheading the transition toward circular exhibition design.
+Historically, the trade show industry produced staggering quantities of post-event landfill waste. At JAYGANGA, we are spearheading the transition toward circular exhibition design.
 
 ### Non-Toxic Waterborne PU Coatings
 Traditional solvent paints release harmful VOCs during rapid indoor setups. We have converted 100% of our paint lines to zero-VOC waterborne coatings that cure with ultra-high scratch resistance and a rich satin sheen.
@@ -486,7 +486,7 @@ Every scrap of aluminum extrusion, acrylic offcut, and steel framing is tracked 
     published_at: "2025-12-10",
     status: "published",
     read_time: "5 min read",
-    seo_title: "Zero-Waste Exhibition Architecture | AURA FORGE",
+    seo_title: "Zero-Waste Exhibition Architecture | JAYGANGA",
     seo_description: "Learn about closed-loop sustainable materials transforming international trade shows."
   }
 ];
@@ -630,7 +630,7 @@ export const initialTestimonials: Testimonial[] = [
     client_role: "Head of Brand Experience",
     client_avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
     project_name: "Auto Expo Flagship Pavilion",
-    testimonial_text: "AURA FORGE turned what looked like an impossible architectural drawing into reality on the expo floor. Their attention to flush finishes, lighting temperatures, and flawless on-time handover was world class.",
+    testimonial_text: "JAYGANGA turned what looked like an impossible architectural drawing into reality on the expo floor. Their attention to flush finishes, lighting temperatures, and flawless on-time handover was world class.",
     rating: 5,
     display_order: 1
   },
@@ -652,7 +652,7 @@ export const initialTestimonials: Testimonial[] = [
     client_role: "Chief Marketing Officer",
     client_avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
     project_name: "450 sqm Tech Summit Arena",
-    testimonial_text: "From heavy structural steel load calculations to the micro-calibration of our 32-meter LED ribbon, AURA FORGE executed with military precision. They are the gold standard in exhibition engineering.",
+    testimonial_text: "From heavy structural steel load calculations to the micro-calibration of our 32-meter LED ribbon, JAYGANGA executed with military precision. They are the gold standard in exhibition engineering.",
     rating: 5,
     display_order: 3
   }
@@ -665,8 +665,8 @@ export const initialPages: Record<string, PageContent> = {
     hero_title: "CRAFTING SPATIAL EXCELLENCE",
     hero_subtitle: "Where industrial engineering meets architectural elegance. We build environments where world-class brands command attention.",
     banner_image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80",
-    body_content: "Founded on the philosophy that temporary exhibition spaces should carry the rigor and permanence of civic architecture, AURA FORGE has grown into a premier international fabrication powerhouse. With 45,000+ sq.ft of mechanized production facilities, advanced 5-axis CNC routers, automated paint suites, and an elite crew of structural riggers, we transform empty exhibition concrete into iconic brand territories.",
-    meta_title: "About AURA FORGE | Turnkey Exhibition Stall Fabrication",
+    body_content: "Founded on the philosophy that temporary exhibition spaces should carry the rigor and permanence of civic architecture, JAYGANGA has grown into a premier international fabrication powerhouse. With 45,000+ sq.ft of mechanized production facilities, advanced 5-axis CNC routers, automated paint suites, and an elite crew of structural riggers, we transform empty exhibition concrete into iconic brand territories.",
+    meta_title: "About JAYGANGA | Turnkey Exhibition Stall Fabrication",
     meta_description: "Learn about our 45,000 sq.ft fabrication facilities, master craftsmen, structural engineers, and global exhibition capabilities."
   },
   services: {
@@ -676,7 +676,7 @@ export const initialPages: Record<string, PageContent> = {
     hero_subtitle: "From single bespoke pavilions to nationwide multi-expo modular rollouts, our fabrication solutions are calibrated for total excellence.",
     banner_image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=80",
     body_content: "Every exhibition brief requires an individualized balance of speed, structural load capacity, aesthetic punch, and budget optimization. Explore our six core engineering divisions.",
-    meta_title: "Exhibition Fabrication Services | AURA FORGE",
+    meta_title: "Exhibition Fabrication Services | JAYGANGA",
     meta_description: "Custom stalls, modular systems, 3D spatial design, retail pop-ups, corporate stage sets, and permanent commercial interiors."
   },
   contact: {
@@ -686,7 +686,7 @@ export const initialPages: Record<string, PageContent> = {
     hero_subtitle: "Connect directly with our principal spatial designers and structural engineers to initiate your project brief.",
     banner_image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
     body_content: "Whether you have an upcoming expo in Mumbai, Delhi, Dubai, Frankfurt, or Singapore, our team is equipped to take your project from initial 3D visualization through to turnkey on-site handover.",
-    meta_title: "Contact AURA FORGE | Exhibition Project Consultation",
+    meta_title: "Contact JAYGANGA | Exhibition Project Consultation",
     meta_description: "Get in touch for bespoke exhibition stall design and fabrication quotations."
   }
 };

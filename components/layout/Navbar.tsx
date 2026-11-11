@@ -21,6 +21,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
+    { label: 'Partners', href: '/#clients' },
     { label: '3D Story', href: '/#story' },
     { label: 'About', href: '/#about' },
     { label: 'Services', href: '/#services' },
@@ -42,11 +43,11 @@ export default function Navbar() {
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-9 h-9 rounded-md bg-[#292B28] border border-[#777B70]/40 flex items-center justify-center">
-            <span className="font-mono text-xs font-bold text-[#F2EFE8] tracking-tight">AF</span>
+            <span className="font-mono text-xs font-bold text-[#F2EFE8] tracking-tight">JG</span>
           </div>
           <div className="flex flex-col">
             <span className="text-base font-bold tracking-wider text-[#FFFFFF] font-sans">
-              {settings.company_name || 'AURA FORGE'}
+              {settings.company_name || 'JAYGANGA'}
             </span>
             <span className="text-[10px] font-mono tracking-widest text-[#D6D1C5] uppercase">
               Exhibition Architecture

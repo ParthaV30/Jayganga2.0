@@ -140,7 +140,6 @@ export default function ProceduralStall({
   wireframeMode = false
 }: ProceduralStallProps) {
   const stallGroup = useRef<THREE.Group>(null);
-  const haloRef = useRef<THREE.Group>(null);
   const turntableRef = useRef<THREE.Group>(null);
   const carSculptRef = useRef<THREE.Group>(null);
   const screenMesh = useRef<THREE.Mesh>(null);
@@ -168,11 +167,6 @@ export default function ProceduralStall({
       stallGroup.current.rotation.y += delta * 0.08;
     }
 
-    if (haloRef.current) {
-      haloRef.current.rotation.y -= delta * 0.2;
-      haloRef.current.position.y = 4.8 + Math.sin(t * 1.2) * 0.06;
-    }
-
     if (turntableRef.current) {
       turntableRef.current.rotation.y += delta * 0.3;
     }
@@ -183,38 +177,51 @@ export default function ProceduralStall({
 
     if (screenData && screenData.ctx) {
       const { ctx, canvas, texture } = screenData;
-      ctx.fillStyle = '#202522';
+      // High-tech dark backdrop
+      ctx.fillStyle = '#161917';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Restrained architectural grid & clean lines
-      ctx.strokeStyle = '#777B70';
-      ctx.lineWidth = 1.5;
+      // Subtle architectural grid background
+      ctx.strokeStyle = 'rgba(119, 123, 112, 0.2)';
+      ctx.lineWidth = 1;
       ctx.beginPath();
-      for (let x = 0; x < canvas.width; x += 32) {
+      for (let x = 0; x < canvas.width; x += 40) {
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
       }
-      for (let y = 0; y < canvas.height; y += 32) {
+      for (let y = 0; y < canvas.height; y += 40) {
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
       }
       ctx.stroke();
 
-      // Subtle Burnt Orange Accent Line
+      // Animated live exhibition audio-visual spectrum bars
+      ctx.fillStyle = '#C65D36';
+      for (let b = 0; b < 24; b++) {
+        const barH = 20 + Math.sin(t * 4 + b * 0.4) * 16 + Math.cos(t * 2 + b * 0.6) * 12;
+        ctx.fillRect(60 + b * 18, 420 - barH, 10, barH);
+      }
+
+      // Glowing accent line
       ctx.strokeStyle = '#C65D36';
-      ctx.lineWidth = 3;
+      ctx.lineWidth = 4;
       ctx.beginPath();
-      ctx.moveTo(60, 240);
-      ctx.lineTo(960, 240);
+      ctx.moveTo(60, 220);
+      ctx.lineTo(960, 220);
       ctx.stroke();
 
-      // Clean Editorial Typography
+      // Primary Brand Name & Trade Show Messaging
       ctx.fillStyle = '#FFFFFF';
-      ctx.font = 'bold 32px sans-serif';
-      ctx.fillText('AURA FORGE PAVILION', 60, 140);
+      ctx.font = '900 38px sans-serif';
+      ctx.fillText('JAYGANGA EXHIBITIONS', 60, 130);
+
+      ctx.fillStyle = '#C65D36';
+      ctx.font = 'bold 20px monospace';
+      ctx.fillText('TURNKEY STALL FABRICATION // 2026', 60, 175);
+
       ctx.fillStyle = '#D6D1C5';
-      ctx.font = '18px monospace';
-      ctx.fillText('ARCHITECTURAL STALL FABRICATION // 2026', 60, 180);
+      ctx.font = '16px monospace';
+      ctx.fillText('HALL 4 • BOOTH B-12 • 120 SQM ISLAND • 100% EXPO READY', 60, 260);
 
       texture.needsUpdate = true;
     }
@@ -316,6 +323,14 @@ export default function ProceduralStall({
           <cylinderGeometry args={[0.8, 0.8, 0.12, 24]} />
           <meshStandardMaterial color="#777B70" metalness={0.7} roughness={0.3} wireframe={wireframeMode} />
         </mesh>
+
+        {/* Real-World Venue Ceiling Rigging Cables (Trade Show Hall Roof Anchors) */}
+        {[[-4.2, -3.0], [4.2, -3.0], [-4.2, 3.0], [4.2, 3.0]].map(([rx, rz], i) => (
+          <mesh key={`rigging-cable-${i}`} position={[rx, 8.5, rz]}>
+            <cylinderGeometry args={[0.008, 0.008, 8.0, 6]} />
+            <meshStandardMaterial color="#777B70" metalness={0.9} roughness={0.2} wireframe={wireframeMode} />
+          </mesh>
+        ))}
       </group>
 
       {/* ============================================================== */}
@@ -491,24 +506,12 @@ export default function ProceduralStall({
       </group>
 
       {/* ============================================================== */}
-      {/* STAGE 5: HALO BANNER, BRANDING & RECEPTION DESK */}
+      {/* STAGE 5: BRANDING, RECEPTION DESK & KIOSKS */}
       {/* ============================================================== */}
       <group 
         name="Stage5-SignageAndBranding" 
         scale={[w5, w5, w5]}
       >
-        {/* Overhead Halo Ring in Graphite with Burnt Orange Accent */}
-        <group ref={haloRef} position={[0, 4.8, 0]}>
-          <mesh castShadow>
-            <torusGeometry args={[2.5, 0.24, 16, 64]} />
-            <meshStandardMaterial color="#202522" metalness={0.7} roughness={0.3} wireframe={wireframeMode} />
-          </mesh>
-          <mesh position={[0, 0, 0]}>
-            <torusGeometry args={[2.52, 0.025, 16, 64]} />
-            <meshStandardMaterial color="#C65D36" />
-          </mesh>
-        </group>
-
         {/* Monogram Block in Graphite & Pure White */}
         <group position={[-1.2, 3.8, -2.7]}>
           <mesh castShadow>

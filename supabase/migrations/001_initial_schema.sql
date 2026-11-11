@@ -1,5 +1,5 @@
 -- ==============================================================================
--- AURA FORGE / JAYGANGA 3D STALL FABRICATION & CMS DATABASE SCHEMA
+-- JAYGANGA 3D STALL FABRICATION & CMS DATABASE SCHEMA
 -- Migration: 001_initial_schema.sql
 -- Compatible with Supabase PostgreSQL (Postgres 15+)
 -- ==============================================================================
@@ -40,10 +40,10 @@ CREATE TABLE admin_users (
 -- ------------------------------------------------------------------------------
 CREATE TABLE site_settings (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-  company_name TEXT NOT NULL DEFAULT 'AURA FORGE',
+  company_name TEXT NOT NULL DEFAULT 'JAYGANGA',
   tagline TEXT NOT NULL DEFAULT 'Architectural Stall Fabrication & Immersive Exhibition Solutions',
   logo_url TEXT,
-  email TEXT NOT NULL DEFAULT 'connect@auraforge-expo.com',
+  email TEXT NOT NULL DEFAULT 'connect@jayganga.com',
   phone TEXT NOT NULL DEFAULT '+91 98201 44552',
   whatsapp TEXT NOT NULL DEFAULT '+91 98201 44552',
   address TEXT NOT NULL,
@@ -164,7 +164,7 @@ CREATE TABLE blog_posts (
   featured_image TEXT NOT NULL,
   category TEXT NOT NULL,
   tags TEXT[] NOT NULL DEFAULT '{}',
-  author_name TEXT NOT NULL DEFAULT 'AURA FORGE Editorial',
+  author_name TEXT NOT NULL DEFAULT 'JAYGANGA Editorial',
   author_role TEXT NOT NULL DEFAULT 'Spatial Architecture Team',
   published_at DATE NOT NULL DEFAULT CURRENT_DATE,
   status TEXT NOT NULL DEFAULT 'published', -- 'published', 'draft', 'scheduled'

@@ -57,10 +57,12 @@ export function useCMS() {
       loadAll();
     };
 
+    window.addEventListener('jayganga_cms_update', handleUpdate);
     window.addEventListener('aura_cms_update', handleUpdate);
     window.addEventListener('storage', handleUpdate);
 
     return () => {
+      window.removeEventListener('jayganga_cms_update', handleUpdate);
       window.removeEventListener('aura_cms_update', handleUpdate);
       window.removeEventListener('storage', handleUpdate);
     };

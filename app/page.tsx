@@ -5,6 +5,7 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import SmoothScroll from '../components/layout/SmoothScroll';
 import HeroSection from '../components/sections/HeroSection';
+import ClientsSection from '../components/sections/ClientsSection';
 import StorySection from '../components/sections/StorySection';
 import AboutSection from '../components/sections/AboutSection';
 import ServicesSection from '../components/sections/ServicesSection';
@@ -37,7 +38,10 @@ export default function HomePage() {
           {/* SECTION 1 — CINEMATIC HERO */}
           <HeroSection content={homepage} />
 
-          {/* SECTION 2 — 3D STALL FABRICATION STORY (SIGNATURE EXPERIENCE) */}
+          {/* SECTION 2 — TRUSTED BY LEADING PARTNERS (CONTINUOUS MARQUEE) */}
+          <ClientsSection />
+
+          {/* SECTION 3 — 3D STALL FABRICATION STORY (SIGNATURE EXPERIENCE) */}
           <StorySection content={homepage} />
 
           {/* SECTION 3 — ABOUT US */}

@@ -8,7 +8,7 @@ import { supabase, isSupabaseConfigured } from '../../../lib/supabase/client';
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState('admin@auraforge-expo.com');
+  const [email, setEmail] = useState('admin@jayganga.com');
   const [password, setPassword] = useState('admin123');
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
@@ -26,11 +26,13 @@ export default function AdminLoginPage() {
           password
         });
         if (!error && data?.session) {
-          localStorage.setItem('aura_admin_session', JSON.stringify({
+          const sessionObj = JSON.stringify({
             email: data.user?.email || email,
             token: data.session.access_token,
             type: 'supabase'
-          }));
+          });
+          localStorage.setItem('jayganga_admin_session', sessionObj);
+          localStorage.setItem('aura_admin_session', sessionObj);
           router.push('/admin');
           return;
         }
@@ -38,11 +40,13 @@ export default function AdminLoginPage() {
 
       // 2. Local fallback verification
       if (email && password) {
-        localStorage.setItem('aura_admin_session', JSON.stringify({
+        const sessionObj = JSON.stringify({
           email,
-          token: 'aura_local_admin_token_' + Date.now(),
+          token: 'jg_local_admin_token_' + Date.now(),
           type: 'local'
-        }));
+        });
+        localStorage.setItem('jayganga_admin_session', sessionObj);
+        localStorage.setItem('aura_admin_session', sessionObj);
         router.push('/admin');
       } else {
         setErrorMsg('Please enter both administrative email and security key.');
@@ -65,10 +69,10 @@ export default function AdminLoginPage() {
           {/* Logo & Headline */}
           <div className="text-center space-y-3">
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#202522] border border-[#202522] text-[#C65D36] font-mono font-black text-xl shadow-md mb-2">
-              AF
+              JG
             </div>
             <h1 className="text-2xl font-black text-[#202522] tracking-tight">
-              AURA FORGE CMS
+              JAYGANGA CMS
             </h1>
             <p className="text-xs font-mono text-[#777B70] uppercase tracking-widest">
               Administrative Console Access
@@ -95,7 +99,7 @@ export default function AdminLoginPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@auraforge-expo.com"
+                  placeholder="admin@jayganga.com"
                   className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-[#292B28] placeholder-[#777B70]/60 focus:outline-none focus:border-[#C65D36] text-sm transition-colors"
                 />
               </div>
@@ -141,7 +145,7 @@ export default function AdminLoginPage() {
               <span>Standard Demo Credentials:</span>
             </div>
             <div className="flex justify-between text-[#292B28] pt-1">
-              <span>Email: <code className="text-[#C65D36]">admin@auraforge-expo.com</code></span>
+              <span>Email: <code className="text-[#C65D36]">admin@jayganga.com</code></span>
             </div>
             <div className="flex justify-between text-[#292B28]">
               <span>Password: <code className="text-[#C65D36]">admin123</code></span>

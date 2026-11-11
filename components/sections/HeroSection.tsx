@@ -85,7 +85,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
           {/* Primary High-Resolution Architectural Stall Photograph */}
           <img
             src={heroImage}
-            alt="AURA FORGE Architectural Exhibition Stall Pavilion"
+            alt="JAYGANGA Architectural Exhibition Stall Pavilion"
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out cursor-pointer"
             onClick={() => setIsLightboxOpen(true)}
           />
@@ -214,14 +214,14 @@ export default function HeroSection({ content }: HeroSectionProps) {
             <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-neutral-900 border border-[#777B70]/20">
               <img
                 src={heroImage}
-                alt="AURA FORGE Architectural Exhibition Stall Pavilion Full View"
+                alt="JAYGANGA Architectural Exhibition Stall Pavilion Full View"
                 className="w-full h-full object-cover"
               />
             </div>
 
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 text-xs">
               <p className="text-[#777B70] font-mono">
-                Location: International Convention Center • Structural Grid: 12m × 15m • Turnkey Build by AURA FORGE
+                Location: International Convention Center • Structural Grid: 12m × 15m • Turnkey Build by JAYGANGA
               </p>
               <Link
                 href="/#contact"

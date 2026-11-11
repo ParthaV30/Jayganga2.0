@@ -23,13 +23,25 @@
   --color-concrete: var(--concrete);
   --color-pure-white: var(--pure-white);
   --color-dark-text: var(--dark-text);
+  --font-sans: var(--font-outfit), 'Outfit', -apple-system, sans-serif;
+  --font-body: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-mono: var(--font-mono), 'JetBrains Mono', monospace;
 }
 
 body {
   background-color: var(--warm-ivory);
   color: var(--dark-text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-jakarta), 'Plus Jakarta Sans', -apple-system, sans-serif;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-outfit), 'Outfit', -apple-system, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
 }
 
 ::selection {
@@ -102,3 +114,82 @@ html.lenis, html.lenis body {
   background-color: #202522;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* Continuous Seamless Marquee Carousel */
+.marquee-wrapper {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-track-left {
+  animation: marquee-scroll-left var(--marquee-speed, 65s) linear infinite;
+}
+
+.marquee-track-right {
+  animation: marquee-scroll-right var(--marquee-speed, 55s) linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-track,
+.marquee-wrapper:active .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 7px));
+  }
+}
+
+@keyframes marquee-scroll-right {
+  0% {
+    transform: translateX(calc(-50% - 7px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-track {
+    gap: 10px;
+  }
+  @keyframes marquee-scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% - 5px));
+    }
+  }
+  @keyframes marquee-scroll-right {
+    0% {
+      transform: translateX(calc(-50% - 5px));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-wrapper {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .marquee-track-left,
+  .marquee-track-right {
+    animation: none;
+  }
+}
+

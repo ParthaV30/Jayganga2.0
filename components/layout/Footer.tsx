@@ -19,11 +19,11 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-5">
             <Link href="/" className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-md bg-[#292B28] border border-[#777B70]/40 flex items-center justify-center">
-                <span className="font-mono text-xs font-bold text-[#F2EFE8]">AF</span>
+                <span className="font-mono text-xs font-bold text-[#F2EFE8]">JG</span>
               </div>
               <div>
                 <span className="text-lg font-bold tracking-wider text-[#FFFFFF] font-sans block">
-                  {settings.company_name || 'AURA FORGE'}
+                  {settings.company_name || 'JAYGANGA'}
                 </span>
                 <span className="text-[10px] font-mono tracking-widest text-[#D6D1C5] uppercase">
                   Exhibition Architecture
@@ -138,7 +138,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#777B70]">
-          <p>{settings.copyright_text || '© 2026 AURA FORGE. All rights reserved.'}</p>
+          <p>{settings.copyright_text || '© 2026 JAYGANGA. All rights reserved.'}</p>
 
           <div className="flex items-center gap-5">
             <Link

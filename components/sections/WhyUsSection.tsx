@@ -73,7 +73,7 @@ export default function WhyUsSection({ content }: WhyUsSectionProps) {
         <div className="max-w-3xl mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#FFFFFF] border border-[#777B70]/30 text-[#202522] text-xs font-mono uppercase tracking-widest">
             <ShieldCheck className="w-3.5 h-3.5 text-[#C65D36]" />
-            <span>{content.why_us_subheading || 'THE AURA FORGE ADVANTAGE'}</span>
+            <span>{content.why_us_subheading || 'THE JAYGANGA ADVANTAGE'}</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-[#202522] tracking-tight leading-[1.12]">
             {content.why_us_heading || 'WHY DISCERNING BRANDS CHOOSE US'}

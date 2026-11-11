@@ -28,20 +28,21 @@ import {
 import { supabase, isSupabaseConfigured } from '../supabase/client';
 
 const STORAGE_KEYS = {
-  SETTINGS: 'aura_site_settings',
-  HOMEPAGE: 'aura_homepage_content',
-  SERVICES: 'aura_services',
-  PROJECTS: 'aura_projects',
-  BLOGS: 'aura_blogs',
-  CATEGORIES: 'aura_categories',
-  MEDIA: 'aura_media',
-  ENQUIRIES: 'aura_enquiries',
-  TESTIMONIALS: 'aura_testimonials',
-  PAGES: 'aura_pages'
+  SETTINGS: 'jayganga_site_settings',
+  HOMEPAGE: 'jayganga_homepage_content',
+  SERVICES: 'jayganga_services',
+  PROJECTS: 'jayganga_projects',
+  BLOGS: 'jayganga_blogs',
+  CATEGORIES: 'jayganga_categories',
+  MEDIA: 'jayganga_media',
+  ENQUIRIES: 'jayganga_enquiries',
+  TESTIMONIALS: 'jayganga_testimonials',
+  PAGES: 'jayganga_pages'
 };
 
 const notifySubscribers = (key: string) => {
   if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('jayganga_cms_update', { detail: { key } }));
     window.dispatchEvent(new CustomEvent('aura_cms_update', { detail: { key } }));
   }
 };

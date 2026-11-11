@@ -1,4 +1,4 @@
-# AURA FORGE — SUPABASE DATABASE & CMS SETUP GUIDE
+# JAYGANGA — SUPABASE DATABASE & CMS SETUP GUIDE
 
 This project uses **Supabase PostgreSQL** for persistent storage, authentication, and media storage.
 
@@ -24,7 +24,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-anon-public-key>
 
 ### 4. Admin Credentials & Authentication
 You can create an administrator directly in the Supabase **Authentication** panel:
-- Add a user with your chosen email (e.g. `admin@auraforge-expo.com`).
+- Add a user with your chosen email (e.g. `admin@jayganga.com`).
 - Insert their `auth.users.id` into the `admin_users` table if desired.
 
 ### 5. Local Storage Fallback Mode
