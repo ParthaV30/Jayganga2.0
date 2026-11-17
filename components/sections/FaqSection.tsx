@@ -10,28 +10,28 @@ interface FAQItem {
 
 const FAQS: FAQItem[] = [
   {
-    question: "What is turnkey exhibition stall fabrication?",
-    answer: "Turnkey exhibition stall fabrication is our complete end-to-end service: 3D spatial CAD architecture, structural CNC woodwork, high-tensile metal framing, electrical lighting calibration, high-resolution graphic branding, venue organizer liaisons, pre-event dry assembly, on-site expo rigging, and post-event dismantle."
+    question: "Who is the leading exhibition stall fabricator in Coimbatore?",
+    answer: "JAYGANGA Expo Stall Fabrication is Coimbatore's premier stall fabrication contractor. Operating from our 45,000 sq.ft mechanized workshop in Edayarpalayam, Coimbatore with 5-axis CNC joinery and automated paint booths, we deliver turnkey custom and modular exhibition booths for CODISSIA Trade Fair Complex, Tamil Nadu, and major expo venues across India."
   },
   {
-    question: "Why choose JAYGANGA for stall fabrication across India?",
-    answer: "With our mechanized 45,000 sq.ft in-house workshops based in Coimbatore and experienced flying engineering crews, we guarantee 100% in-house production with zero third-party dependency, MSME certified standards, and an 18-hour early handover record across all major Indian trade convention centers."
+    question: "Do you fabricate exhibition stalls for CODISSIA Trade Fair Complex, Coimbatore?",
+    answer: "Yes. JAYGANGA is a leading stall fabricator for CODISSIA Trade Fair Complex in Coimbatore. We regularly construct turnkey stalls for flagship expos including INTEC, Agri Intex, Texfair, and international industrial expos, providing organizer engineering clearances, dry-fit workshop mockups, and round-the-clock on-site technician standby."
+  },
+  {
+    question: "Do you provide stall fabrication services across Tamil Nadu and Pan-India?",
+    answer: "Yes. While our core manufacturing headquarters is located in Coimbatore, Tamil Nadu, our flying structural engineering crews deliver turnkey exhibition stall fabrication in Chennai, Madurai, Bengaluru, Mumbai, Delhi, Hyderabad, and all major Indian convention centers."
+  },
+  {
+    question: "What is the cost of exhibition stall fabrication in Coimbatore & Tamil Nadu?",
+    answer: "Stall fabrication costs in Coimbatore and Tamil Nadu range from ₹1,200 to ₹2,500 per sq.ft for modular aluminum systems, and ₹2,500 to ₹6,000+ per sq.ft for bespoke luxury architectural pavilions, inclusive of 3D VR design, structural fabrication, graphic printing, and turnkey setup."
   },
   {
     question: "What is the difference between custom and modular stall fabrication?",
     answer: "Custom stall fabrication delivers bespoke architectural artistry with organic curves, double-decker lounges, custom acrylic features, and flush finishes. Modular stall fabrication uses lightweight precision aluminum frameworks that are quick to erect and re-usable across multi-city trade show schedules for maximum ROI."
   },
   {
-    question: "How much does exhibition stall fabrication cost in India?",
-    answer: "Stall fabrication costs vary based on dimensions, structural height, material selection (timber, ACP, acrylic, glass), and interactive tech (LED walls, kinetic rigs). Modular booths generally range from ₹1,200 to ₹2,500 per sq.ft, while bespoke luxury architectural pavilions range from ₹2,500 to ₹6,000+ per sq.ft, inclusive of turnkey management."
-  },
-  {
     question: "How early should we start the exhibition stall fabrication process?",
     answer: "We recommend initiating 3D conceptualization 45 to 90 days prior to the expo date. This ensures ample time for 3D photorealistic approvals, organizer engineering permits, full dry-assembly mockups in our facility, and flawless stress-free on-site setup."
-  },
-  {
-    question: "Do you provide on-site technical support during the exhibition?",
-    answer: "Yes. Every JAYGANGA project includes dedicated on-site standby technicians and structural riggers throughout the exhibition days to oversee power loads, audiovisual systems, and lighting maintenance, ensuring uninterrupted brand performance."
   }
 ];
 

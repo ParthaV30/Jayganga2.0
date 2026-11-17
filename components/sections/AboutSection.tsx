@@ -46,10 +46,10 @@ export default function AboutSection({ content }: AboutSectionProps) {
               />
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded bg-[#202522]/90 text-[#FFFFFF] backdrop-blur-sm">
                 <span className="text-[10px] font-mono text-[#D6D1C5] uppercase tracking-widest block mb-0.5">
-                  FACILITY & CRAFTSMANSHIP
+                  COIMBATORE WORKSHOP & FABRICATION UNIT
                 </span>
                 <p className="text-xs font-medium">
-                  45,000 sq.ft Heavy Structural & CNC Joinery Facilities
+                  45,000 sq.ft Mechanized Structural & CNC Joinery Facilities • Coimbatore, Tamil Nadu
                 </p>
               </div>
             </div>
@@ -59,11 +59,11 @@ export default function AboutSection({ content }: AboutSectionProps) {
               <div className="flex items-center gap-2.5 mb-1.5">
                 <Award className="w-4 h-4 text-[#C65D36]" />
                 <span className="text-xs font-mono uppercase tracking-wider text-[#202522] font-bold">
-                  Zero-Tolerance
+                  CODISSIA Ready
                 </span>
               </div>
               <p className="text-xs text-[#777B70] leading-relaxed">
-                Pre-assembled and dry-fitted in our workshop prior to venue dispatch.
+                Pre-assembled and dry-fitted in our Coimbatore workshop prior to venue dispatch.
               </p>
             </div>
           </div>
@@ -72,10 +72,10 @@ export default function AboutSection({ content }: AboutSectionProps) {
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-4 text-base sm:text-lg leading-relaxed font-normal text-[#292B28]">
               <p>
-                {content.about_paragraph1 || 'We are a professional stall fabrication and exhibition solutions company specializing in designing, developing and executing customized exhibition spaces. From concept to completion, we combine creativity, engineering and craftsmanship to bring brands to life.'}
+                {content.about_paragraph1 || 'We are a premier stall fabrication and exhibition solutions company in Coimbatore specializing in designing, engineering, and fabricating bespoke exhibition spaces. From concept to completion, we combine creativity, structural craftsmanship, and precision to bring brands to life.'}
               </p>
               <p className="text-sm sm:text-base text-[#777B70] font-normal leading-relaxed">
-                {content.about_paragraph2 || 'With over 45,000 sq.ft of in-house CNC carpentry, heavy metal fabrication workshops, laser cutting facilities, and paint booths, our team ensures every millimetre meets rigorous global expo standards.'}
+                {content.about_paragraph2 || 'With over 45,000 sq.ft of in-house CNC carpentry, heavy metal fabrication workshops, laser cutting facilities, and automated paint suites in Edayarpalayam, Coimbatore, our team delivers turnkey exhibition stalls for CODISSIA Trade Fair Complex, Chennai, and venues across India.'}
               </p>
             </div>
 

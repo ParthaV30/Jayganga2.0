@@ -43,10 +43,10 @@ export default function AboutClient() {
               <div className="absolute bottom-8 left-8 right-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
                 <div>
                   <span className="text-xs font-mono text-[#C65D36] uppercase tracking-widest block mb-1 font-semibold">
-                    PRODUCTION EPICENTER
+                    COIMBATORE FABRICATION EPICENTER
                   </span>
                   <h3 className="text-2xl font-bold text-white">
-                    45,000 sq.ft Heavy Structural Welding & CNC Joinery Facilities
+                    45,000 sq.ft Mechanized Workshops in Coimbatore, Serving Tamil Nadu & Pan-India
                   </h3>
                 </div>
                 <span className="px-4 py-2 rounded-xl bg-white/90 backdrop-blur-md border border-[#777B70]/30 text-xs font-mono text-[#202522] font-semibold">
@@ -121,3 +121,4 @@ export default function AboutClient() {
     </SmoothScroll>
   );
 }
+

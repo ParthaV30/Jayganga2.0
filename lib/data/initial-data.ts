@@ -27,17 +27,17 @@ export const initialSettings: SiteSettings = {
   facebook_url: "https://facebook.com/jaygangaexpo",
   twitter_url: "https://x.com/jayganga",
   youtube_url: "https://youtube.com/@jayganga",
-  seo_title: "JAYGANGA | Expo Stall Fabrication & Exhibition Solutions",
-  seo_description: "Premier exhibition stall design, custom fabrication, and turnkey execution company based in Coimbatore, executing world-class architectural brand experiences across India.",
-  footer_text: "Engineered for distinction. We design, fabricate, and install bespoke exhibition pavilions, modular stall environments, and corporate trade show spaces across India.",
+  seo_title: "Stall Fabrication in Coimbatore, Tamil Nadu | JAYGANGA Expo Stall Fabricators India",
+  seo_description: "Premier stall fabrication in Coimbatore & Tamil Nadu. JAYGANGA delivers turnkey exhibition stalls, custom 3D booths, and CODISSIA trade fair pavilions across Tamil Nadu and Pan-India from our 45,000 sq.ft in-house workshops.",
+  footer_text: "Engineered for distinction. Headquartered in Coimbatore, Tamil Nadu, we fabricate and install bespoke exhibition pavilions, modular stall environments, and corporate trade show spaces for CODISSIA and expo venues across India.",
   copyright_text: "© 2026 JAYGANGA EXPO STALL FABRICATION. All rights reserved."
 };
 
 export const initialHomepage: HomepageContent = {
-  hero_badge: "JAYGANGA EXPO STALL FABRICATION",
+  hero_badge: "STALL FABRICATION • COIMBATORE • TAMIL NADU • PAN-INDIA",
   hero_title_line1: "WE BUILD EXPERIENCES.",
   hero_title_line2: "YOU BUILD CONNECTIONS.",
-  hero_subtitle: "Premier exhibition stall fabrication, custom 3D booth design, and turnkey trade show execution across India.",
+  hero_subtitle: "Premier stall fabrication in Coimbatore, Tamil Nadu & pan-India. Custom 3D booth design, CODISSIA trade fair stalls, and turnkey expo execution with 45,000 sq.ft in-house workshops.",
   hero_cta_primary: "Explore Our Projects",
   hero_cta_secondary: "Start Your Project",
   hero_image_url: "/images/hero-stall.jpg",

@@ -32,27 +32,44 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.stallfabricator.in'),
   title: {
-    default: "JAYGANGA | Exhibition Stall Fabrication & 3D Booth Design India",
-    template: "%s | JAYGANGA Stall Fabrication"
+    default: "Stall Fabrication in Coimbatore, Tamil Nadu | JAYGANGA Expo Stall Fabricators India",
+    template: "%s | Stall Fabrication Coimbatore & India | JAYGANGA"
   },
-  description: "Top-rated exhibition stall fabrication and custom booth design company in India. 45,000 sq.ft mechanized workshops in Coimbatore executing turnkey expo stalls, modular pavilions, and trade show booths across India.",
+  description: "Premier stall fabrication in Coimbatore & Tamil Nadu. JAYGANGA delivers turnkey exhibition stalls, custom 3D booths, and CODISSIA trade fair pavilions across Tamil Nadu and Pan-India from our 45,000 sq.ft in-house workshops.",
   keywords: [
-    "stall fabrication",
-    "stall fabrications",
-    "exhibition stall fabrication",
-    "expo stall fabrication",
-    "custom stall fabrication",
-    "stall fabricator in india",
+    // 1. Coimbatore Keywords (Priority #1)
+    "stall fabrication in coimbatore",
     "stall fabrication coimbatore",
-    "trade show booth fabrication",
-    "exhibition booth builder",
-    "3d stall design",
-    "turnkey exhibition stalls",
-    "modular stall fabrication",
-    "stall fabrication bangalore",
+    "stall fabricators in coimbatore",
+    "stall fabricators coimbatore",
+    "exhibition stall fabrication coimbatore",
+    "codissia stall fabrication",
+    "codissia exhibition stall fabricators",
+    "exhibition stall designers in coimbatore",
+    "custom stall fabrication coimbatore",
+    "expo booth builders coimbatore",
+    "trade show stall fabricator coimbatore",
+    "stall fabrication edayarpalayam coimbatore",
+    
+    // 2. Tamil Nadu Keywords (Priority #2)
+    "stall fabrication in tamil nadu",
+    "stall fabricators in tamil nadu",
+    "exhibition stall fabricators tamil nadu",
     "stall fabrication chennai",
-    "stall fabrication mumbai",
-    "stall fabrication delhi"
+    "stall fabricators chennai",
+    "stall fabrication madurai",
+    "stall fabrication tirupur",
+    "stall fabrication salem",
+
+    // 3. India / Pan-India Keywords (Priority #3)
+    "stall fabrication in india",
+    "stall fabricator in india",
+    "stall fabrications",
+    "exhibition stall fabrication india",
+    "trade show booth fabrication india",
+    "turnkey exhibition stalls india",
+    "modular stall fabricators india",
+    "pan india stall fabricators"
   ],
   authors: [{ name: "JAYGANGA Expo Stall Fabrication" }],
   creator: "JAYGANGA",
@@ -83,10 +100,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "JAYGANGA | Exhibition Stall Fabrication & 3D Booth Design India",
-    description: "Top-rated exhibition stall fabrication company in India. Turnkey custom expo stalls, 3D modular booths, and trade show pavilions.",
+    title: "Stall Fabrication in Coimbatore, Tamil Nadu | JAYGANGA Expo Stall Fabricators India",
+    description: "Top-rated exhibition stall fabrication in Coimbatore & Tamil Nadu. Turnkey custom expo stalls, CODISSIA trade fair booths, and pan-India exhibition pavilions.",
     url: "https://www.stallfabricator.in",
-    siteName: "JAYGANGA Expo Stall Fabrication",
+    siteName: "JAYGANGA Expo Stall Fabrication - Coimbatore",
     images: [
       {
         url: "/images/logo.png",
@@ -100,13 +117,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "JAYGANGA | Exhibition Stall Fabrication & Booth Design India",
-    description: "Top-rated exhibition stall fabrication company in India. Turnkey custom expo stalls and trade show pavilions.",
+    title: "Stall Fabrication in Coimbatore, Tamil Nadu | JAYGANGA",
+    description: "#1 Stall fabrication company in Coimbatore, Tamil Nadu. Turnkey custom expo stalls and CODISSIA trade show pavilions.",
     images: ["https://www.stallfabricator.in/images/logo.png"],
   },
   other: {
     "geo.region": "IN-TN",
-    "geo.placename": "Coimbatore",
+    "geo.placename": "Coimbatore, Tamil Nadu, India",
     "geo.position": "11.0168;76.9558",
     "ICBM": "11.0168, 76.9558",
   },
@@ -116,15 +133,23 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
       "@id": "https://www.stallfabricator.in/#organization",
-      "name": "JAYGANGA Expo Stall Fabrication",
-      "alternateName": ["Jayganga Stall Fabrication", "Jayganga Exhibition Stall Fabrication", "Jayganga Coimbatore"],
+      "name": "JAYGANGA Expo Stall Fabrication - Coimbatore, Tamil Nadu",
+      "alternateName": [
+        "Stall Fabrication in Coimbatore",
+        "Stall Fabricators Coimbatore",
+        "Exhibition Stall Fabrication Coimbatore",
+        "Jayganga Stall Fabrication",
+        "CODISSIA Stall Fabricators"
+      ],
       "url": "https://www.stallfabricator.in",
       "logo": "https://www.stallfabricator.in/images/logo.png",
+      "image": "https://www.stallfabricator.in/images/logo.png",
       "email": "info.jayganga@gmail.com",
       "telephone": "+919363333040",
-      "description": "Leading exhibition stall fabrication, custom expo booth design, and turnkey trade show construction company in India.",
+      "priceRange": "₹₹ - ₹₹₹₹",
+      "description": "Leading exhibition stall fabrication contractor based in Coimbatore, Tamil Nadu. Turnkey custom expo stalls, CODISSIA trade fair exhibition booths, and pan-India exhibition pavilions with 45,000 sq.ft in-house workshops.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "31, Nanjammal Illam, 3rd St, Pari Nagar, Edayarpalayam",
@@ -138,6 +163,17 @@ const jsonLd = {
         "latitude": 11.0168,
         "longitude": 76.9558
       },
+      "areaServed": [
+        { "@type": "City", "name": "Coimbatore", "description": "Primary City & Fabrication Workshop Headquarters" },
+        { "@type": "Place", "name": "CODISSIA Trade Fair Complex, Coimbatore" },
+        { "@type": "AdministrativeArea", "name": "Tamil Nadu" },
+        { "@type": "City", "name": "Chennai" },
+        { "@type": "City", "name": "Tirupur" },
+        { "@type": "City", "name": "Salem" },
+        { "@type": "City", "name": "Madurai" },
+        { "@type": "City", "name": "Bengaluru" },
+        { "@type": "Country", "name": "India" }
+      ],
       "sameAs": [
         "https://linkedin.com/company/jayganga",
         "https://instagram.com/jayganga.expo",
@@ -149,7 +185,7 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": "https://www.stallfabricator.in/#service",
-      "name": "JAYGANGA Expo Stall Fabrication",
+      "name": "JAYGANGA Stall Fabrication Services Coimbatore",
       "image": "https://www.stallfabricator.in/images/logo.png",
       "url": "https://www.stallfabricator.in",
       "telephone": "+919363333040",
@@ -163,41 +199,39 @@ const jsonLd = {
         "addressCountry": "IN"
       },
       "areaServed": [
-        { "@type": "Country", "name": "India" },
         { "@type": "City", "name": "Coimbatore" },
+        { "@type": "Place", "name": "CODISSIA Trade Fair Complex, Coimbatore" },
+        { "@type": "AdministrativeArea", "name": "Tamil Nadu" },
         { "@type": "City", "name": "Chennai" },
         { "@type": "City", "name": "Bengaluru" },
-        { "@type": "City", "name": "Mumbai" },
-        { "@type": "City", "name": "Delhi" },
-        { "@type": "City", "name": "Hyderabad" },
-        { "@type": "City", "name": "Ahmedabad" }
+        { "@type": "Country", "name": "India" }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Exhibition Stall Fabrication Services",
+        "name": "Stall Fabrication in Coimbatore & India",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Custom Exhibition Stall Fabrication",
-              "description": "Bespoke handcrafted wooden, metal, and acrylic exhibition booths tailored to brand identity."
+              "name": "Custom Exhibition Stall Fabrication in Coimbatore",
+              "description": "Bespoke handcrafted wooden, metal, and acrylic exhibition booths fabricated in Coimbatore for CODISSIA and pan-India venues."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Modular Stall Fabrication",
-              "description": "High-grade lightweight aluminum and modular composite booths for multi-city expo tours."
+              "name": "Modular Stall Fabrication Tamil Nadu",
+              "description": "High-grade lightweight aluminum and modular composite booths for multi-city expo tours across Tamil Nadu and India."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Corporate Event Fabrication & Stage Sets",
-              "description": "Turnkey stage sets, keynote backdrops, entrance arches, and experiential lounges."
+              "name": "CODISSIA Trade Fair Stall Fabrication",
+              "description": "Fast-track turnkey exhibition stall construction, electrical rigging, and technical handover at CODISSIA Coimbatore."
             }
           },
           {
@@ -215,7 +249,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": "https://www.stallfabricator.in/#website",
       "url": "https://www.stallfabricator.in",
-      "name": "JAYGANGA Stall Fabrication",
+      "name": "JAYGANGA Stall Fabrication Coimbatore",
       "publisher": {
         "@id": "https://www.stallfabricator.in/#organization"
       }
@@ -226,39 +260,39 @@ const jsonLd = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is exhibition stall fabrication?",
+          "name": "Who is the best stall fabricator in Coimbatore?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Exhibition stall fabrication is the end-to-end engineering, manufacturing, and on-site assembly of custom or modular trade show booths. It involves 3D structural CAD design, CNC carpentry, high-tensile metal welding, paint finishing, graphic printing, electrical rigging, and venue handover."
+            "text": "JAYGANGA Expo Stall Fabrication is Coimbatore's premier exhibition stall fabrication company. Headquartered in Edayarpalayam, Coimbatore with a 45,000 sq.ft mechanized workshop equipped with 5-axis CNC routers and paint booths, JAYGANGA provides turnkey custom stall fabrication for CODISSIA Trade Fair Complex, Tamil Nadu, and across India."
           }
         },
         {
           "@type": "Question",
-          "name": "Where can I find the best stall fabricator in India?",
+          "name": "Do you fabricate exhibition stalls for CODISSIA Trade Fair Complex in Coimbatore?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "JAYGANGA Expo Stall Fabrication provides premier turnkey stall fabrication across India, with an in-house mechanized 45,000 sq.ft workshop in Coimbatore and on-site deployment in major convention hubs including Mumbai, Delhi, Bengaluru, Chennai, Hyderabad, and Ahmedabad."
+            "text": "Yes, JAYGANGA is an experienced stall fabricator for major exhibitions at CODISSIA Trade Fair Complex in Coimbatore, including INTEC, Agri Intex, Texfair, and international expos, providing fast setup, venue clearances, and 24/7 on-site technical standby."
           }
         },
         {
           "@type": "Question",
-          "name": "What is the difference between custom and modular stall fabrication?",
+          "name": "Do you provide stall fabrication across Tamil Nadu and Pan-India?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Custom stall fabrication uses tailor-made woodwork, structural steel, acrylics, and flush finishes to create unique, high-impact architectural pavilions. Modular stall fabrication uses reusable aluminum sub-frames and interchangeable panel systems for rapid assembly and cost-efficiency across multiple trade shows."
+            "text": "Yes, while our primary manufacturing base is in Coimbatore, Tamil Nadu, we provide turnkey stall fabrication across Chennai, Madurai, Bengaluru, Mumbai, Delhi, Hyderabad, and major expo convention centres pan-India."
           }
         },
         {
           "@type": "Question",
-          "name": "How much does exhibition stall fabrication cost in India?",
+          "name": "What is the cost of exhibition stall fabrication in Coimbatore?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of stall fabrication depends on booth size, design complexity, height permits, lighting, and materials. Modular stalls typically range from ₹1,200 to ₹2,500 per sq.ft, while custom luxury architectural pavilions range from ₹2,500 to ₹6,000+ per sq.ft including complete turnkey installation and dismantle."
+            "text": "Stall fabrication costs in Coimbatore range from ₹1,200 to ₹2,500 per sq.ft for modular booths, and ₹2,500 to ₹6,000+ per sq.ft for custom luxury architectural pavilions, including 3D design, dry-fit workshop pre-assembly, CODISSIA on-site installation, and dismantling."
           }
         },
         {
           "@type": "Question",
-          "name": "How early should I book a stall fabrication contractor?",
+          "name": "How early should I book a stall fabrication contractor in Coimbatore?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "It is best to engage your stall fabricator 45 to 90 days before the exhibition. This provides sufficient time for 3D conceptual design approvals, venue engineering clearances, dry-fit workshop pre-assembly, and hassle-free venue setup."

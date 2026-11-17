@@ -2,16 +2,16 @@ import type { Metadata } from 'next';
 import HomeClient from './HomeClient';
 
 export const metadata: Metadata = {
-  title: "JAYGANGA | Exhibition Stall Fabrication & 3D Booth Design India",
-  description: "Top-rated exhibition stall fabrication and custom booth design company in India. 45,000 sq.ft mechanized workshops in Coimbatore executing turnkey expo stalls, modular pavilions, and trade show booths across India.",
+  title: "Stall Fabrication in Coimbatore, Tamil Nadu | JAYGANGA Expo Stall Fabricators India",
+  description: "Premier stall fabrication in Coimbatore & Tamil Nadu. JAYGANGA delivers turnkey exhibition stalls, custom 3D booths, and CODISSIA trade fair pavilions across Tamil Nadu and Pan-India from our 45,000 sq.ft in-house workshops.",
   alternates: {
     canonical: "https://www.stallfabricator.in",
   },
   openGraph: {
-    title: "JAYGANGA | Exhibition Stall Fabrication & 3D Booth Design India",
-    description: "Top-rated exhibition stall fabrication company in India. Turnkey custom expo stalls, 3D modular booths, and trade show pavilions.",
+    title: "Stall Fabrication in Coimbatore, Tamil Nadu | JAYGANGA Expo Stall Fabricators India",
+    description: "Top-rated exhibition stall fabrication in Coimbatore & Tamil Nadu. Turnkey custom expo stalls, CODISSIA trade fair booths, and pan-India exhibition pavilions.",
     url: "https://www.stallfabricator.in",
-    siteName: "JAYGANGA Expo Stall Fabrication",
+    siteName: "JAYGANGA Expo Stall Fabrication - Coimbatore",
     images: [
       {
         url: "/images/logo.png",

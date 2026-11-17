@@ -25,12 +25,12 @@ export default function HeroSection({ content }: HeroSectionProps) {
           {/* Telemetry Badge */}
           <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-md bg-[#FFFFFF] border border-[#777B70]/30 text-[#292B28] text-xs font-mono uppercase tracking-widest w-fit shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#C65D36]" />
-            <span>{content.hero_badge || 'JAYGANGA EXPO STALL FABRICATION'}</span>
+            <span>{content.hero_badge || 'STALL FABRICATION • COIMBATORE • TAMIL NADU • PAN-INDIA'}</span>
           </div>
 
           {/* Monumental Solid Headline */}
           <div className="space-y-1">
-            <span className="sr-only">Premier Exhibition Stall Fabrication, Custom Booth Design, and Turnkey Expo Fabrication Across India</span>
+            <span className="sr-only">Premier Stall Fabrication in Coimbatore, Tamil Nadu & Pan-India. Custom Exhibition Stalls, 3D Booth Design, CODISSIA Trade Fair Fabricators</span>
             <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black tracking-tight leading-[1.08] text-[#202522]">
               <span className="block">{content.hero_title_line1 || 'WE BUILD EXPERIENCES.'}</span>
               <span className="block text-[#C65D36]">
@@ -41,13 +41,13 @@ export default function HeroSection({ content }: HeroSectionProps) {
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg text-[#777B70] font-normal leading-relaxed max-w-xl">
-            {content.hero_subtitle || 'Premier exhibition stall fabrication, custom 3D booth design, and turnkey trade show execution across India.'}
+            {content.hero_subtitle || 'Premier stall fabrication in Coimbatore, Tamil Nadu & pan-India. Custom 3D booth design, CODISSIA trade fair stalls, and turnkey expo execution with 45,000 sq.ft in-house workshops.'}
           </p>
 
           {/* Action CTAs */}
           <div className="flex flex-wrap items-center gap-3.5 pt-1">
             <Link
-              href="/#projects"
+              href="/projects"
               className="px-6 py-3.5 rounded-md bg-[#C65D36] text-[#FFFFFF] font-medium text-xs tracking-wider uppercase hover:bg-[#B34E28] transition-colors flex items-center gap-2 shadow-sm"
             >
               <span>{content.hero_cta_primary || 'Explore Our Projects'}</span>
@@ -55,7 +55,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
             </Link>
 
             <Link
-              href="/#contact"
+              href="/contact"
               className="px-6 py-3.5 rounded-md bg-[#FFFFFF] border border-[#777B70]/30 hover:bg-[#D6D1C5] text-[#202522] font-medium text-xs tracking-wider uppercase transition-colors flex items-center gap-2 shadow-sm"
             >
               <span>{content.hero_cta_secondary || 'Start Your Project'}</span>
@@ -65,12 +65,12 @@ export default function HeroSection({ content }: HeroSectionProps) {
           {/* Live Engineering Telemetry Metadata */}
           <div className="pt-4 border-t border-[#777B70]/20 grid grid-cols-2 gap-4 text-[11px] font-mono text-[#777B70]">
             <div>
-              <span className="text-[#777B70] block uppercase tracking-wider">FACILITY CAPACITY</span>
+              <span className="text-[#777B70] block uppercase tracking-wider">COIMBATORE WORKSHOPS</span>
               <span className="text-[#202522] font-semibold text-xs">45,000 sq.ft Mechanized</span>
             </div>
             <div>
-              <span className="text-[#777B70] block uppercase tracking-wider">QUALITY AUDIT</span>
-              <span className="text-[#C65D36] font-semibold text-xs">MSME Certified</span>
+              <span className="text-[#777B70] block uppercase tracking-wider">PRIMARY SERVICE REGION</span>
+              <span className="text-[#C65D36] font-semibold text-xs">Coimbatore • Tamil Nadu • India</span>
             </div>
           </div>
         </div>
