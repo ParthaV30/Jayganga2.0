@@ -37,7 +37,7 @@ export const initialHomepage: HomepageContent = {
   hero_badge: "JAYGANGA EXPO STALL FABRICATION",
   hero_title_line1: "WE BUILD EXPERIENCES.",
   hero_title_line2: "YOU BUILD CONNECTIONS.",
-  hero_subtitle: "Transforming spaces into extraordinary brand experiences through innovative exhibition stall design, precision fabrication and flawless turnkey execution.",
+  hero_subtitle: "Premier exhibition stall fabrication, custom 3D booth design, and turnkey trade show execution across India.",
   hero_cta_primary: "Explore Our Projects",
   hero_cta_secondary: "Start Your Project",
   hero_image_url: "/images/hero-stall.jpg",

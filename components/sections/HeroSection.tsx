@@ -30,6 +30,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
 
           {/* Monumental Solid Headline */}
           <div className="space-y-1">
+            <span className="sr-only">Premier Exhibition Stall Fabrication, Custom Booth Design, and Turnkey Expo Fabrication Across India</span>
             <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black tracking-tight leading-[1.08] text-[#202522]">
               <span className="block">{content.hero_title_line1 || 'WE BUILD EXPERIENCES.'}</span>
               <span className="block text-[#C65D36]">
@@ -40,7 +41,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg text-[#777B70] font-normal leading-relaxed max-w-xl">
-            {content.hero_subtitle || 'Transforming spaces into extraordinary brand experiences through innovative exhibition stall design, fabrication and execution.'}
+            {content.hero_subtitle || 'Premier exhibition stall fabrication, custom 3D booth design, and turnkey trade show execution across India.'}
           </p>
 
           {/* Action CTAs */}

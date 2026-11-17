@@ -29,7 +29,7 @@ import { supabase, isSupabaseConfigured } from '../supabase/client';
 
 const STORAGE_KEYS = {
   SETTINGS: 'jayganga_site_settings_v3',
-  HOMEPAGE: 'jayganga_homepage_content_v3',
+  HOMEPAGE: 'jayganga_homepage_content_v4',
   SERVICES: 'jayganga_services',
   PROJECTS: 'jayganga_projects',
   BLOGS: 'jayganga_blogs',

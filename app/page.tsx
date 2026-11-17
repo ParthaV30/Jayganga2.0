@@ -12,6 +12,7 @@ import ProjectsSection from '../components/sections/ProjectsSection';
 import WhyUsSection from '../components/sections/WhyUsSection';
 import ProcessSection from '../components/sections/ProcessSection';
 import BlogSection from '../components/sections/BlogSection';
+import FaqSection from '../components/sections/FaqSection';
 import ContactSection from '../components/sections/ContactSection';
 import { useCMS } from '../lib/data/useCMS';
 
@@ -66,7 +67,10 @@ export default function HomePage() {
           {/* SECTION 8 — BLOG */}
           <BlogSection blogs={blogs} content={homepage} />
 
-          {/* SECTION 9 — CONTACT */}
+          {/* SECTION 9 — FREQUENTLY ASKED QUESTIONS */}
+          <FaqSection />
+
+          {/* SECTION 10 — CONTACT */}
           <ContactSection 
             settings={settings} 
             content={homepage} 
