@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     icon: "/images/logo.png",
     apple: "/images/logo.png",
   },
+  verification: {
+    google: "google9dafb4de4a510060",
+  },
   openGraph: {
     title: "JAYGANGA | Expo Stall Fabrication & Exhibition Solutions",
     description: "Transforming empty exhibition concrete into extraordinary brand experiences through precision engineering and turnkey execution across India.",
