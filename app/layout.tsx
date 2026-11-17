@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jaygangastallfabrication.in'),
+  metadataBase: new URL('https://www.stallfabricator.in'),
   title: "JAYGANGA | Expo Stall Fabrication & Exhibition Solutions",
   description: "Established exhibition stall design, precision fabrication, and turnkey execution company based in Coimbatore, creating premier brand environments across India.",
   keywords: [
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JAYGANGA | Expo Stall Fabrication & Exhibition Solutions",
     description: "Transforming empty exhibition concrete into extraordinary brand experiences through precision engineering and turnkey execution across India.",
-    url: "https://jaygangastallfabrication.in",
+    url: "https://www.stallfabricator.in",
     siteName: "JAYGANGA",
     images: [
       {

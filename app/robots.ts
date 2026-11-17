@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/admin', '/admin/*'],
       },
     ],
-    sitemap: 'https://jaygangastallfabrication.in/sitemap.xml',
+    sitemap: 'https://www.stallfabricator.in/sitemap.xml',
   };
 }
 

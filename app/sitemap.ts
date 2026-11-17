@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { initialBlogs } from '../lib/data/initial-data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://jaygangastallfabrication.in';
+  const baseUrl = 'https://www.stallfabricator.in';
 
   const blogUrls = initialBlogs.map((b) => ({
     url: `${baseUrl}/blog/${b.slug}`,
