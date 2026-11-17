@@ -134,8 +134,14 @@ export default function EnquiryManagementPage() {
       {/* Enquiries List */}
       <div className="space-y-4">
         {filtered.length === 0 ? (
-          <div className="py-20 text-center text-[#777B70] font-mono text-xs">
-            No client enquiries found matching your filter criteria.
+          <div className="py-24 px-6 text-center rounded-2xl bg-white border border-[#777B70]/20 space-y-3 shadow-sm">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#F2EFE8] text-[#C65D36]">
+              <MailCheck className="w-6 h-6" />
+            </div>
+            <h3 className="text-base font-bold text-[#202522]">Production CRM Ready</h3>
+            <p className="text-xs font-mono text-[#777B70] max-w-md mx-auto">
+              No pending client enquiries. New exhibition RFQ submissions from the website contact and project quote forms will appear here in real time.
+            </p>
           </div>
         ) : (
           filtered.map((enq) => {

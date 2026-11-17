@@ -18,8 +18,12 @@ export default function Footer() {
           {/* Col 1 & 2: Brand & Statement */}
           <div className="lg:col-span-2 space-y-5">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-md bg-[#292B28] border border-[#777B70]/40 flex items-center justify-center">
-                <span className="font-mono text-xs font-bold text-[#F2EFE8]">JG</span>
+              <div className="w-10 h-10 rounded-md bg-[#202522] border border-[#777B70]/40 flex items-center justify-center overflow-hidden shadow-sm">
+                <img 
+                  src={settings.logo_url || '/images/logo.png'} 
+                  alt="Jay Ganga Expo Stall Fabrication" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <span className="text-lg font-bold tracking-wider text-[#FFFFFF] font-sans block">

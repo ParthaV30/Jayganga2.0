@@ -30,8 +30,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jaygangastallfabrication.in'),
   title: "JAYGANGA | Expo Stall Fabrication & Exhibition Solutions",
-  description: "Established exhibition stall design, precision fabrication, and turnkey execution company creating premier brand environments across India.",
+  description: "Established exhibition stall design, precision fabrication, and turnkey execution company based in Coimbatore, creating premier brand environments across India.",
   keywords: [
     "Stall Fabrication",
     "Exhibition Booth Design",
@@ -40,16 +41,30 @@ export const metadata: Metadata = {
     "Modular Stalls",
     "Trade Show Architecture",
     "Auto Expo Stalls",
-    "Turnkey Exhibition Solutions"
+    "Turnkey Exhibition Solutions",
+    "Coimbatore Stall Fabrication"
   ],
   authors: [{ name: "JAYGANGA Expo Stall Fabrication" }],
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   openGraph: {
     title: "JAYGANGA | Expo Stall Fabrication & Exhibition Solutions",
     description: "Transforming empty exhibition concrete into extraordinary brand experiences through precision engineering and turnkey execution across India.",
-    type: "website",
+    url: "https://jaygangastallfabrication.in",
+    siteName: "JAYGANGA",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 458,
+        height: 458,
+        alt: "JAYGANGA Expo Stall Fabrication",
+      },
+    ],
     locale: "en_IN",
-    siteName: "JAYGANGA"
-  }
+    type: "website",
+  },
 };
 
 export default function RootLayout({

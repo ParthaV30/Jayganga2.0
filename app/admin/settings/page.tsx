@@ -202,7 +202,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
                 type="text"
                 value={settings.whatsapp}
                 onChange={(e) => handleChange('whatsapp', e.target.value)}
-                placeholder="+91 98201 44552"
+                placeholder="+91 93633 33040"
                 className="w-full px-4 py-2.5 rounded-xl bg-[#F2EFE8] border border-[#777B70]/30 text-emerald-600 font-mono text-xs focus:outline-none focus:border-[#C65D36]"
               />
             </div>

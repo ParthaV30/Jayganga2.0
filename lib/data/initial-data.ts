@@ -13,22 +13,22 @@ import {
 
 export const initialSettings: SiteSettings = {
   company_name: "JAYGANGA",
-  tagline: "Architectural Stall Fabrication & Immersive Exhibition Solutions",
-  logo_url: "",
-  email: "connect@jayganga.com",
-  phone: "+91 98201 44552",
-  whatsapp: "+91 98201 44552",
-  address: "Studio 4B, Industrial Art District, Hubli-Dharwad Expressway / BKC Annexe",
-  city: "Mumbai & Bengaluru",
+  tagline: "Bespoke Expo Stall Fabrication & Turnkey Exhibition Solutions",
+  logo_url: "/images/logo.png",
+  email: "info.jayganga@gmail.com",
+  phone: "+91 93633 33040",
+  whatsapp: "+91 93633 33040",
+  address: "31, Nanjammal Illam, 3rd St, Pari Nagar, Edayarpalayam, Coimbatore — 641025",
+  city: "Coimbatore, Tamil Nadu",
   country: "India / Pan-India Execution",
-  google_maps_url: "https://maps.google.com",
+  google_maps_url: "https://maps.google.com/?q=Edayarpalayam,+Coimbatore,+Tamil+Nadu+641025",
   linkedin_url: "https://linkedin.com/company/jayganga",
   instagram_url: "https://instagram.com/jayganga.expo",
   facebook_url: "https://facebook.com/jaygangaexpo",
   twitter_url: "https://x.com/jayganga",
   youtube_url: "https://youtube.com/@jayganga",
-  seo_title: "JAYGANGA | Premium 3D Exhibition Stall Fabrication & Architecture",
-  seo_description: "Premier exhibition stall design, custom fabrication, and turnkey execution company creating world-class architectural brand experiences across India.",
+  seo_title: "JAYGANGA | Expo Stall Fabrication & Exhibition Solutions",
+  seo_description: "Premier exhibition stall design, custom fabrication, and turnkey execution company based in Coimbatore, executing world-class architectural brand experiences across India.",
   footer_text: "Engineered for distinction. We design, fabricate, and install bespoke exhibition pavilions, modular stall environments, and corporate trade show spaces across India.",
   copyright_text: "© 2026 JAYGANGA EXPO STALL FABRICATION. All rights reserved."
 };
@@ -555,72 +555,7 @@ export const initialMedia: MediaAsset[] = [
   }
 ];
 
-export const initialEnquiries: Enquiry[] = [
-  {
-    id: "enq-101",
-    name: "Rajesh Malhotra",
-    company: "Tata Advanced Systems",
-    email: "r.malhotra@tata-advanced.com",
-    phone: "+91 98112 34991",
-    service_required: "Custom Exhibition Stall Fabrication",
-    event_location: "DefExpo / Aero India, Bengaluru",
-    event_date: "2026-11-20",
-    stall_size: "180 sqm Island Booth",
-    project_description: "Require an island exhibition booth with double-decker VIP discussion room, interactive drone showcase tables, and 12-meter high branding gantry.",
-    budget_range: "₹45L - ₹65L",
-    status: "new",
-    admin_notes: "High priority lead. Received RFQ documents. Arranging 3D concept deck presentation for Monday.",
-    created_at: "2026-11-05T14:32:00Z"
-  },
-  {
-    id: "enq-102",
-    name: "Dr. Elena Rostova",
-    company: "Novartis Healthcare Global",
-    email: "elena.rostova@novartis.com",
-    phone: "+41 61 324 1111",
-    service_required: "Modular Stall Fabrication",
-    event_location: "BIEC Bengaluru / CPHI India",
-    event_date: "2026-12-12",
-    stall_size: "100 sqm Corner Booth",
-    project_description: "Need a high-precision modular structure that can be dismantled, stored, and re-erected at our next symposium in Mumbai next February.",
-    budget_range: "$35,000 - $50,000",
-    status: "in_progress",
-    admin_notes: "Initial CAD drawings submitted. Client requested revised quote with custom timber acoustic meeting room.",
-    created_at: "2026-11-04T09:15:00Z"
-  },
-  {
-    id: "enq-103",
-    name: "Marcus Sterling",
-    company: "Apex Hypercars UK",
-    email: "m.sterling@apex-motors.co.uk",
-    phone: "+44 20 7946 0912",
-    service_required: "Custom Exhibition Stall Fabrication",
-    event_location: "Geneva International Motor Show",
-    event_date: "2027-03-05",
-    stall_size: "350 sqm Multi-tier Pavilion",
-    project_description: "Turnkey luxury pavilion required for electric hypercar unveil. Requires rotating illuminated plinths and private lounge with security detail access.",
-    budget_range: "£120,000 - £180,000",
-    status: "contacted",
-    admin_notes: "Discovery call completed with their London brand agency. NDA executed.",
-    created_at: "2026-11-02T16:45:00Z"
-  },
-  {
-    id: "enq-104",
-    name: "Pooja Singhania",
-    company: "Singhania Fine Jewels",
-    email: "pooja@singhaniajewels.in",
-    phone: "+91 99300 88219",
-    service_required: "Retail and Promotional Displays",
-    event_location: "Jio World Convention Centre, Mumbai (IIJS Signature)",
-    event_date: "2027-01-08",
-    stall_size: "72 sqm Peninsula Booth",
-    project_description: "Ultra-high security display cases, satin champagne gold metal joinery, Italian marble counters, and custom jewelry spot lighting with 98 CRI.",
-    budget_range: "₹25L - ₹35L",
-    status: "converted",
-    admin_notes: "Contract signed! Advance payment of 40% cleared. Workshop fabrication commencing this week.",
-    created_at: "2026-10-28T11:20:00Z"
-  }
-];
+export const initialEnquiries: Enquiry[] = [];
 
 export const initialTestimonials: Testimonial[] = [
   {

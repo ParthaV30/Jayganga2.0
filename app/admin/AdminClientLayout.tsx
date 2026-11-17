@@ -104,8 +104,8 @@ export default function AdminClientLayout({ children }: { children: React.ReactN
       {/* Mobile Top Header */}
       <div className="lg:hidden flex items-center justify-between p-4 bg-[#202522] text-white border-b border-white/10 z-30">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-[#C65D36] font-bold font-mono text-xs">
-            JG
+          <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center overflow-hidden">
+            <img src="/images/logo.png" alt="Jay Ganga" className="w-full h-full object-cover" />
           </div>
           <span className="font-bold text-white text-sm">JAY GANGA CMS</span>
         </div>
@@ -126,8 +126,8 @@ export default function AdminClientLayout({ children }: { children: React.ReactN
         {/* Brand Header */}
         <div className="p-6 border-b border-white/10">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center">
-              <span className="font-mono text-sm font-black text-[#C65D36]">JG</span>
+            <div className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center overflow-hidden">
+              <img src="/images/logo.png" alt="Jay Ganga" className="w-full h-full object-cover" />
             </div>
             <div>
               <span className="font-black tracking-wide text-white font-sans text-base block">

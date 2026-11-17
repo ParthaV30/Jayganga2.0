@@ -188,40 +188,46 @@ export default function AdminDashboardOverview() {
           </div>
 
           <div className="space-y-3">
-            {enquiries.slice(0, 4).map((enq) => (
-              <div
-                key={enq.id}
-                className="p-4 rounded-xl bg-[#F2EFE8] border border-[#777B70]/15 hover:border-[#777B70]/30 transition-colors flex items-center justify-between gap-4"
-              >
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <span className="font-semibold text-[#202522] text-sm">{enq.name}</span>
-                    <span className="text-xs text-[#777B70] font-mono">• {enq.company}</span>
-                  </div>
-                  <div className="text-xs text-[#777B70] truncate max-w-sm">
-                    {enq.service_required} • {enq.event_location || 'Venue pending'}
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <span className={`px-2.5 py-1 rounded text-[10px] font-mono uppercase font-bold ${
-                    enq.status === 'new' 
-                      ? 'bg-[#C65D36]/15 text-[#C65D36] border border-[#C65D36]/30'
-                      : enq.status === 'converted'
-                      ? 'bg-emerald-100 text-emerald-800 border border-emerald-300'
-                      : 'bg-white border border-[#777B70]/20 text-[#292B28]'
-                  }`}>
-                    {enq.status.replace('_', ' ')}
-                  </span>
-                  <Link
-                    href="/admin/enquiries"
-                    className="p-1.5 text-[#777B70] hover:text-[#202522] rounded-lg hover:bg-white"
-                  >
-                    <ArrowUpRight className="w-4 h-4" />
-                  </Link>
-                </div>
+            {enquiries.length === 0 ? (
+              <div className="py-12 text-center text-[#777B70] font-mono text-xs rounded-xl bg-[#F2EFE8] border border-[#777B70]/15">
+                No new client enquiries. All incoming leads from contact forms will appear here in real time.
               </div>
-            ))}
+            ) : (
+              enquiries.slice(0, 4).map((enq) => (
+                <div
+                  key={enq.id}
+                  className="p-4 rounded-xl bg-[#F2EFE8] border border-[#777B70]/15 hover:border-[#777B70]/30 transition-colors flex items-center justify-between gap-4"
+                >
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-[#202522] text-sm">{enq.name}</span>
+                      <span className="text-xs text-[#777B70] font-mono">• {enq.company}</span>
+                    </div>
+                    <div className="text-xs text-[#777B70] truncate max-w-sm">
+                      {enq.service_required} • {enq.event_location || 'Venue pending'}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <span className={`px-2.5 py-1 rounded text-[10px] font-mono uppercase font-bold ${
+                      enq.status === 'new' 
+                        ? 'bg-[#C65D36]/15 text-[#C65D36] border border-[#C65D36]/30'
+                        : enq.status === 'converted'
+                        ? 'bg-emerald-100 text-emerald-800 border border-emerald-300'
+                        : 'bg-white border border-[#777B70]/20 text-[#292B28]'
+                    }`}>
+                      {enq.status.replace('_', ' ')}
+                    </span>
+                    <Link
+                      href="/admin/enquiries"
+                      className="p-1.5 text-[#777B70] hover:text-[#202522] rounded-lg hover:bg-white"
+                    >
+                      <ArrowUpRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </div>
 

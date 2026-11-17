@@ -47,14 +47,39 @@ export default function ContactSection({ settings, content, preselectedService }
     e.preventDefault();
     setErrorMsg(null);
 
-    if (!formData.name || !formData.email || !formData.phone || !formData.project_description) {
+    const name = formData.name.trim();
+    const email = formData.email.trim();
+    const phone = formData.phone.trim();
+    const company = formData.company.trim();
+    const project_description = formData.project_description.trim();
+
+    if (!name || !email || !phone || !project_description) {
       setErrorMsg('Please complete all required fields.');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setErrorMsg('Please enter a valid business email address.');
+      return;
+    }
+
+    const digitsOnly = phone.replace(/\D/g, '');
+    if (digitsOnly.length < 10) {
+      setErrorMsg('Please enter a valid contact phone number with at least 10 digits.');
       return;
     }
 
     setIsSubmitting(true);
     try {
-      const res = await DataStore.submitEnquiry(formData);
+      const res = await DataStore.submitEnquiry({
+        ...formData,
+        name,
+        email,
+        phone,
+        company,
+        project_description
+      });
       setSubmittedId(res.id);
       setFormData({
         name: '',

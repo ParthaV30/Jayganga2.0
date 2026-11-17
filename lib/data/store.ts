@@ -28,14 +28,14 @@ import {
 import { supabase, isSupabaseConfigured } from '../supabase/client';
 
 const STORAGE_KEYS = {
-  SETTINGS: 'jayganga_site_settings_v2',
-  HOMEPAGE: 'jayganga_homepage_content_v2',
+  SETTINGS: 'jayganga_site_settings_v3',
+  HOMEPAGE: 'jayganga_homepage_content_v3',
   SERVICES: 'jayganga_services',
   PROJECTS: 'jayganga_projects',
   BLOGS: 'jayganga_blogs',
   CATEGORIES: 'jayganga_categories',
   MEDIA: 'jayganga_media',
-  ENQUIRIES: 'jayganga_enquiries',
+  ENQUIRIES: 'jayganga_enquiries_v3',
   TESTIMONIALS: 'jayganga_testimonials',
   PAGES: 'jayganga_pages'
 };

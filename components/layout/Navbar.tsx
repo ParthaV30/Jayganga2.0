@@ -42,8 +42,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-md bg-[#292B28] border border-[#777B70]/40 flex items-center justify-center">
-            <span className="font-mono text-xs font-bold text-[#F2EFE8] tracking-tight">JG</span>
+          <div className="w-10 h-10 rounded-md bg-[#202522] border border-[#777B70]/40 flex items-center justify-center overflow-hidden shadow-sm">
+            <img 
+              src={settings.logo_url || '/images/logo.png'} 
+              alt="Jay Ganga Expo Stall Fabrication" 
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="flex flex-col">
             <span className="text-base font-bold tracking-wider text-[#FFFFFF] font-sans">
