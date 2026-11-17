@@ -1,86 +1,30 @@
-'use client';
+import type { Metadata } from 'next';
+import HomeClient from './HomeClient';
 
-import React, { useState } from 'react';
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
-import SmoothScroll from '../components/layout/SmoothScroll';
-import HeroSection from '../components/sections/HeroSection';
-import ClientsSection from '../components/sections/ClientsSection';
-import StorySection from '../components/sections/StorySection';
-import ServicesSection from '../components/sections/ServicesSection';
-import ProjectsSection from '../components/sections/ProjectsSection';
-import WhyUsSection from '../components/sections/WhyUsSection';
-import ProcessSection from '../components/sections/ProcessSection';
-import BlogSection from '../components/sections/BlogSection';
-import FaqSection from '../components/sections/FaqSection';
-import ContactSection from '../components/sections/ContactSection';
-import { useCMS } from '../lib/data/useCMS';
+export const metadata: Metadata = {
+  title: "JAYGANGA | Exhibition Stall Fabrication & 3D Booth Design India",
+  description: "Top-rated exhibition stall fabrication and custom booth design company in India. 45,000 sq.ft mechanized workshops in Coimbatore executing turnkey expo stalls, modular pavilions, and trade show booths across India.",
+  alternates: {
+    canonical: "https://www.stallfabricator.in",
+  },
+  openGraph: {
+    title: "JAYGANGA | Exhibition Stall Fabrication & 3D Booth Design India",
+    description: "Top-rated exhibition stall fabrication company in India. Turnkey custom expo stalls, 3D modular booths, and trade show pavilions.",
+    url: "https://www.stallfabricator.in",
+    siteName: "JAYGANGA Expo Stall Fabrication",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 458,
+        height: 458,
+        alt: "JAYGANGA Expo Stall Fabrication Logo",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+};
 
 export default function HomePage() {
-  const { settings, homepage, services, projects, blogs } = useCMS();
-  const [selectedService, setSelectedService] = useState<string | undefined>(undefined);
-
-  const handleSelectService = (serviceTitle: string) => {
-    setSelectedService(serviceTitle);
-  };
-
-  const handleEnquireProject = (projectTitle: string) => {
-    setSelectedService(`Project: ${projectTitle}`);
-  };
-
-  return (
-    <SmoothScroll>
-      <div className="min-h-screen bg-[#F2EFE8] text-[#292B28] selection:bg-[#C65D36] selection:text-white">
-        {/* Architectural Sticky Navigation Header */}
-        <Navbar />
-
-        <main>
-          {/* SECTION 1 — CINEMATIC HERO */}
-          <HeroSection content={homepage} />
-
-          {/* SECTION 2 — TRUSTED BY LEADING PARTNERS (CONTINUOUS MARQUEE) */}
-          <ClientsSection />
-
-          {/* SECTION 3 — 3D STALL FABRICATION STORY (SIGNATURE EXPERIENCE) */}
-          <StorySection content={homepage} />
-
-          {/* SECTION 4 — SERVICES */}
-          <ServicesSection 
-            services={services} 
-            content={homepage} 
-            onSelectService={handleSelectService} 
-          />
-
-          {/* SECTION 5 — FEATURED PROJECTS */}
-          <ProjectsSection 
-            projects={projects} 
-            content={homepage} 
-            onEnquireProject={handleEnquireProject} 
-          />
-
-          {/* SECTION 6 — WHY CHOOSE US */}
-          <WhyUsSection content={homepage} />
-
-          {/* SECTION 7 — OUR PROCESS */}
-          <ProcessSection content={homepage} />
-
-          {/* SECTION 8 — BLOG */}
-          <BlogSection blogs={blogs} content={homepage} />
-
-          {/* SECTION 9 — FREQUENTLY ASKED QUESTIONS */}
-          <FaqSection />
-
-          {/* SECTION 10 — CONTACT */}
-          <ContactSection 
-            settings={settings} 
-            content={homepage} 
-            preselectedService={selectedService} 
-          />
-        </main>
-
-        {/* Global Architectural Footer */}
-        <Footer />
-      </div>
-    </SmoothScroll>
-  );
+  return <HomeClient />;
 }

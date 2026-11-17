@@ -60,7 +60,7 @@ export default function Footer() {
               {services.slice(0, 6).map((service) => (
                 <li key={service.id}>
                   <Link
-                    href="/#services"
+                    href="/services"
                     className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors flex items-center gap-1.5 group"
                   >
                     <span className="text-[#777B70] group-hover:text-[#C65D36] transition-colors">›</span>
@@ -78,22 +78,25 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/#story" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">3D Stall Story</Link>
-              </li>
-              <li>
                 <Link href="/about" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">About Studio</Link>
               </li>
               <li>
-                <Link href="/#projects" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">Curated Portfolio</Link>
+                <Link href="/services" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">Fabrication Services</Link>
+              </li>
+              <li>
+                <Link href="/projects" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">Curated Portfolio</Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">Industry Insights</Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">Project Enquiry</Link>
+              </li>
+              <li>
+                <Link href="/#story" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">3D Stall Story</Link>
               </li>
               <li>
                 <Link href="/#process" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">Turnkey Process</Link>
-              </li>
-              <li>
-                <Link href="/#blog" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">Industry Insights</Link>
-              </li>
-              <li>
-                <Link href="/#contact" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">Project Enquiry</Link>
               </li>
             </ul>
           </div>

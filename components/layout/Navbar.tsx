@@ -21,14 +21,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Partners', href: '/#clients' },
-    { label: '3D Story', href: '/#story' },
     { label: 'About', href: '/about' },
-    { label: 'Services', href: '/#services' },
-    { label: 'Portfolio', href: '/#projects' },
+    { label: 'Services', href: '/services' },
+    { label: 'Portfolio', href: '/projects' },
     { label: 'Process', href: '/#process' },
-    { label: 'Insights', href: '/#blog' },
-    { label: 'Contact', href: '/#contact' },
+    { label: 'Insights', href: '/blog' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -76,7 +74,7 @@ export default function Navbar() {
         <div className="hidden sm:flex items-center gap-3">
           {/* Primary CTA — Solid Burnt Orange */}
           <Link
-            href="/#contact"
+            href="/contact"
             className="px-4 py-2 rounded-md bg-[#C65D36] text-[#FFFFFF] font-medium text-xs tracking-wider uppercase hover:bg-[#B34E28] transition-colors flex items-center gap-1.5"
           >
             <span>Start Project</span>
@@ -110,7 +108,7 @@ export default function Navbar() {
             ))}
             <div className="pt-4 border-t border-[#777B70]/30 flex flex-col gap-2.5">
               <Link
-                href="/#contact"
+                href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-2.5 px-4 rounded-md bg-[#C65D36] text-[#FFFFFF] font-medium text-xs tracking-wider uppercase text-center"
               >

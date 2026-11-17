@@ -57,9 +57,6 @@ export const metadata: Metadata = {
   authors: [{ name: "JAYGANGA Expo Stall Fabrication" }],
   creator: "JAYGANGA",
   publisher: "JAYGANGA",
-  alternates: {
-    canonical: "https://www.stallfabricator.in",
-  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

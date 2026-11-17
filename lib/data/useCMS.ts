@@ -11,16 +11,24 @@ import {
   Enquiry, 
   MediaAsset 
 } from './types';
-import { initialSettings, initialHomepage } from './initial-data';
+import { 
+  initialSettings, 
+  initialHomepage, 
+  initialServices, 
+  initialProjects, 
+  initialBlogs, 
+  initialEnquiries, 
+  initialMedia 
+} from './initial-data';
 
 export function useCMS() {
   const [settings, setSettings] = useState<SiteSettings>(initialSettings);
   const [homepage, setHomepage] = useState<HomepageContent>(initialHomepage);
-  const [services, setServices] = useState<Service[]>([]);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [blogs, setBlogs] = useState<BlogPost[]>([]);
-  const [enquiries, setEnquiries] = useState<Enquiry[]>([]);
-  const [media, setMedia] = useState<MediaAsset[]>([]);
+  const [services, setServices] = useState<Service[]>(initialServices);
+  const [projects, setProjects] = useState<Project[]>(initialProjects);
+  const [blogs, setBlogs] = useState<BlogPost[]>(initialBlogs);
+  const [enquiries, setEnquiries] = useState<Enquiry[]>(initialEnquiries);
+  const [media, setMedia] = useState<MediaAsset[]>(initialMedia);
   const [loading, setLoading] = useState(true);
   const [isCloud, setIsCloud] = useState(false);
 
