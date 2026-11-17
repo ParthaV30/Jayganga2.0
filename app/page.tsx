@@ -7,7 +7,6 @@ import SmoothScroll from '../components/layout/SmoothScroll';
 import HeroSection from '../components/sections/HeroSection';
 import ClientsSection from '../components/sections/ClientsSection';
 import StorySection from '../components/sections/StorySection';
-import AboutSection from '../components/sections/AboutSection';
 import ServicesSection from '../components/sections/ServicesSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
 import WhyUsSection from '../components/sections/WhyUsSection';
@@ -43,9 +42,6 @@ export default function HomePage() {
 
           {/* SECTION 3 — 3D STALL FABRICATION STORY (SIGNATURE EXPERIENCE) */}
           <StorySection content={homepage} />
-
-          {/* SECTION 3 — ABOUT US */}
-          <AboutSection content={homepage} />
 
           {/* SECTION 4 — SERVICES */}
           <ServicesSection 

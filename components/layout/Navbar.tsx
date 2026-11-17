@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ArrowUpRight, Shield } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { useCMS } from '../../lib/data/useCMS';
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
   const navLinks = [
     { label: 'Partners', href: '/#clients' },
     { label: '3D Story', href: '/#story' },
-    { label: 'About', href: '/#about' },
+    { label: 'About', href: '/about' },
     { label: 'Services', href: '/#services' },
     { label: 'Portfolio', href: '/#projects' },
     { label: 'Process', href: '/#process' },
@@ -50,7 +50,7 @@ export default function Navbar() {
               {settings.company_name || 'JAYGANGA'}
             </span>
             <span className="text-[10px] font-mono tracking-widest text-[#D6D1C5] uppercase">
-              Exhibition Architecture
+              EXPO STALL FABRICATION
             </span>
           </div>
         </Link>
@@ -70,16 +70,6 @@ export default function Navbar() {
 
         {/* Right Action Buttons */}
         <div className="hidden sm:flex items-center gap-3">
-          {/* Admin shortcut */}
-          <Link
-            href="/admin"
-            className="px-3 py-1.5 rounded-md text-xs font-mono uppercase tracking-wider text-[#D6D1C5] hover:text-[#FFFFFF] hover:bg-[#292B28] border border-[#777B70]/40 transition-colors flex items-center gap-1.5"
-            title="Access CMS Admin Panel"
-          >
-            <Shield className="w-3.5 h-3.5 text-[#C65D36]" />
-            <span className="hidden md:inline">Admin CMS</span>
-          </Link>
-
           {/* Primary CTA — Solid Burnt Orange */}
           <Link
             href="/#contact"
@@ -115,14 +105,6 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="pt-4 border-t border-[#777B70]/30 flex flex-col gap-2.5">
-              <Link
-                href="/admin"
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2.5 px-3 rounded-md text-xs font-mono uppercase tracking-wider text-[#D6D1C5] bg-[#292B28] border border-[#777B70]/30 flex items-center justify-center gap-2"
-              >
-                <Shield className="w-3.5 h-3.5 text-[#C65D36]" />
-                <span>Admin CMS Dashboard</span>
-              </Link>
               <Link
                 href="/#contact"
                 onClick={() => setMobileMenuOpen(false)}

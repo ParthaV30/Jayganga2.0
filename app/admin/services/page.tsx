@@ -51,7 +51,7 @@ export default function ServicesManagementPage() {
       full_description: '',
       image_url: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80',
       icon_name: 'Layers',
-      features: ['Precision structural calculations', 'Onsite engineering director', 'ISO 9001 certified finish'],
+      features: ['Precision structural calculations', 'Onsite engineering director', 'MSME certified finish'],
       display_order: services.length + 1,
       is_active: true
     });

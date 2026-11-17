@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, MessageCircle, ArrowUpRight, Shield, Globe, Award } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle, ArrowUpRight, Globe, Award } from 'lucide-react';
 import { useCMS } from '../../lib/data/useCMS';
 
 export default function Footer() {
@@ -26,23 +26,23 @@ export default function Footer() {
                   {settings.company_name || 'JAYGANGA'}
                 </span>
                 <span className="text-[10px] font-mono tracking-widest text-[#D6D1C5] uppercase">
-                  Exhibition Architecture
+                  EXPO STALL FABRICATION
                 </span>
               </div>
             </Link>
 
             <p className="text-xs leading-relaxed text-[#D6D1C5] max-w-md">
-              {settings.footer_text || 'Transforming empty exhibition concrete into monumental architectural brand environments through precision engineering, custom metal fabrication, and turnkey execution globally.'}
+              {settings.footer_text || 'Transforming empty exhibition concrete into monumental architectural brand environments through precision engineering, custom metal fabrication, and turnkey execution across India.'}
             </p>
 
             <div className="flex flex-wrap items-center gap-3 pt-1">
               <div className="flex items-center gap-1.5 text-xs font-mono text-[#D6D1C5] bg-[#292B28] px-3 py-1.5 rounded border border-[#777B70]/30">
                 <Award className="w-3.5 h-3.5 text-[#C65D36]" />
-                <span>ISO 9001:2015 Fabrication</span>
+                <span>MSME Certified Fabrication</span>
               </div>
               <div className="flex items-center gap-1.5 text-xs font-mono text-[#D6D1C5] bg-[#292B28] px-3 py-1.5 rounded border border-[#777B70]/30">
                 <Globe className="w-3.5 h-3.5 text-[#C65D36]" />
-                <span>48+ Global Expo Venues</span>
+                <span>Pan India Expo Venues</span>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Footer() {
                 <Link href="/#story" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">3D Stall Story</Link>
               </li>
               <li>
-                <Link href="/#about" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">About Studio</Link>
+                <Link href="/about" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">About Studio</Link>
               </li>
               <li>
                 <Link href="/#projects" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">Curated Portfolio</Link>
@@ -141,14 +141,6 @@ export default function Footer() {
           <p>{settings.copyright_text || '© 2026 JAYGANGA. All rights reserved.'}</p>
 
           <div className="flex items-center gap-5">
-            <Link
-              href="/admin"
-              className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors flex items-center gap-1.5"
-            >
-              <Shield className="w-3.5 h-3.5 text-[#C65D36]" />
-              <span>CMS Admin Panel</span>
-            </Link>
-            <span>•</span>
             <a href="#top" className="text-[#D6D1C5] hover:text-[#FFFFFF] transition-colors">
               Back to Top ↑
             </a>

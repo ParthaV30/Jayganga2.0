@@ -28,8 +28,8 @@ import {
 import { supabase, isSupabaseConfigured } from '../supabase/client';
 
 const STORAGE_KEYS = {
-  SETTINGS: 'jayganga_site_settings',
-  HOMEPAGE: 'jayganga_homepage_content',
+  SETTINGS: 'jayganga_site_settings_v2',
+  HOMEPAGE: 'jayganga_homepage_content_v2',
   SERVICES: 'jayganga_services',
   PROJECTS: 'jayganga_projects',
   BLOGS: 'jayganga_blogs',

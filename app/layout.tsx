@@ -30,8 +30,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "JAYGANGA | Architectural Stall Fabrication & Exhibition Solutions",
-  description: "Established international exhibition stall design, precision fabrication, and turnkey execution company creating world-class architectural brand environments.",
+  title: "JAYGANGA | Expo Stall Fabrication & Exhibition Solutions",
+  description: "Established exhibition stall design, precision fabrication, and turnkey execution company creating premier brand environments across India.",
   keywords: [
     "Stall Fabrication",
     "Exhibition Booth Design",
@@ -42,12 +42,12 @@ export const metadata: Metadata = {
     "Auto Expo Stalls",
     "Turnkey Exhibition Solutions"
   ],
-  authors: [{ name: "JAYGANGA Spatial Architecture" }],
+  authors: [{ name: "JAYGANGA Expo Stall Fabrication" }],
   openGraph: {
-    title: "JAYGANGA | Architectural Stall Fabrication & Exhibition Solutions",
-    description: "Transforming empty exhibition concrete into extraordinary brand experiences through precision engineering and turnkey execution.",
+    title: "JAYGANGA | Expo Stall Fabrication & Exhibition Solutions",
+    description: "Transforming empty exhibition concrete into extraordinary brand experiences through precision engineering and turnkey execution across India.",
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     siteName: "JAYGANGA"
   }
 };

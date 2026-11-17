@@ -50,7 +50,7 @@ export default function AboutPage() {
                   </h3>
                 </div>
                 <span className="px-4 py-2 rounded-xl bg-white/90 backdrop-blur-md border border-[#777B70]/30 text-xs font-mono text-[#202522] font-semibold">
-                  ISO 9001:2015 CERTIFIED
+                  MSME CERTIFIED
                 </span>
               </div>
             </div>

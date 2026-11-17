@@ -13,7 +13,7 @@ export default function AboutSection({ content }: AboutSectionProps) {
   const stats = [
     { value: content.stat_years || '16+', label: content.stat_years_label || 'Years of Craftsmanship', icon: Clock },
     { value: content.stat_projects || '850+', label: content.stat_projects_label || 'Turnkey Stalls Fabricated', icon: Factory },
-    { value: content.stat_venues || '48+', label: content.stat_venues_label || 'Global Expo Venues', icon: Compass },
+    { value: content.stat_venues || 'Pan India', label: content.stat_venues_label || 'Expo Venues Across India', icon: Compass },
     { value: content.stat_rate || '99.4%', label: content.stat_rate_label || 'On-Time Handover Rate', icon: ShieldCheck }
   ];
 

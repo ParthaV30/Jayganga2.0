@@ -240,8 +240,8 @@ export default function ClientsSection() {
               <MapPin className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-xl sm:text-2xl font-black text-[#202522]">48+</div>
-              <div className="text-[11px] sm:text-xs font-mono text-[#777B70] uppercase">Convention Centers</div>
+              <div className="text-xl sm:text-2xl font-black text-[#202522]">Pan India</div>
+              <div className="text-[11px] sm:text-xs font-mono text-[#777B70] uppercase">Expo Venues</div>
             </div>
           </div>
         </div>

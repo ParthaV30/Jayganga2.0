@@ -20,7 +20,7 @@ export const initialSettings: SiteSettings = {
   whatsapp: "+91 98201 44552",
   address: "Studio 4B, Industrial Art District, Hubli-Dharwad Expressway / BKC Annexe",
   city: "Mumbai & Bengaluru",
-  country: "India / Global Projects",
+  country: "India / Pan-India Execution",
   google_maps_url: "https://maps.google.com",
   linkedin_url: "https://linkedin.com/company/jayganga",
   instagram_url: "https://instagram.com/jayganga.expo",
@@ -28,13 +28,13 @@ export const initialSettings: SiteSettings = {
   twitter_url: "https://x.com/jayganga",
   youtube_url: "https://youtube.com/@jayganga",
   seo_title: "JAYGANGA | Premium 3D Exhibition Stall Fabrication & Architecture",
-  seo_description: "Premier exhibition stall design, custom fabrication, and turnkey execution company creating world-class architectural brand experiences for international expos.",
-  footer_text: "Engineered for distinction. We design, fabricate, and install bespoke exhibition pavilions, modular stall environments, and corporate trade show spaces globally.",
-  copyright_text: "© 2026 JAYGANGA EXHIBITIONS & ARCHITECTURE. All rights reserved."
+  seo_description: "Premier exhibition stall design, custom fabrication, and turnkey execution company creating world-class architectural brand experiences across India.",
+  footer_text: "Engineered for distinction. We design, fabricate, and install bespoke exhibition pavilions, modular stall environments, and corporate trade show spaces across India.",
+  copyright_text: "© 2026 JAYGANGA EXPO STALL FABRICATION. All rights reserved."
 };
 
 export const initialHomepage: HomepageContent = {
-  hero_badge: "BESPOKE EXHIBITION ARCHITECTURE & FABRICATION",
+  hero_badge: "JAYGANGA EXPO STALL FABRICATION",
   hero_title_line1: "WE BUILD EXPERIENCES.",
   hero_title_line2: "YOU BUILD CONNECTIONS.",
   hero_subtitle: "Transforming spaces into extraordinary brand experiences through innovative exhibition stall design, precision fabrication and flawless turnkey execution.",
@@ -51,8 +51,8 @@ export const initialHomepage: HomepageContent = {
   stat_years_label: "Years of Craftsmanship",
   stat_projects: "850+",
   stat_projects_label: "Turnkey Stalls Fabricated",
-  stat_venues: "48+",
-  stat_venues_label: "Global Expo Venues",
+  stat_venues: "Pan India",
+  stat_venues_label: "Pan-India Expo Venues",
   stat_rate: "99.4%",
   stat_rate_label: "On-Time Handover Rate",
   story_section_badge: "SIGNATURE 3D EXPERIENCE",

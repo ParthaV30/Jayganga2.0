@@ -30,7 +30,7 @@ const PILLARS = [
     title: "Quality Fabrication",
     headline: "Industrial Precision Engineering",
     description: "Crafted in our mechanized 45,000 sq.ft facility using 5-axis CNC routers, high-tensile structural steel welding, and automated dust-free paint suites.",
-    detail: "Certified ISO 9001:2015 Standards"
+    detail: "MSME Certified Standards"
   },
   {
     icon: Users,

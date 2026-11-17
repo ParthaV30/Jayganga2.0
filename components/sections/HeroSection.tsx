@@ -25,7 +25,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
           {/* Telemetry Badge */}
           <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-md bg-[#FFFFFF] border border-[#777B70]/30 text-[#292B28] text-xs font-mono uppercase tracking-widest w-fit shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#C65D36]" />
-            <span>{content.hero_badge || 'EXHIBITION ARCHITECTURE & FABRICATION'}</span>
+            <span>{content.hero_badge || 'JAYGANGA EXPO STALL FABRICATION'}</span>
           </div>
 
           {/* Monumental Solid Headline */}
@@ -69,7 +69,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
             </div>
             <div>
               <span className="text-[#777B70] block uppercase tracking-wider">QUALITY AUDIT</span>
-              <span className="text-[#C65D36] font-semibold text-xs">ISO 9001:2015 Certified</span>
+              <span className="text-[#C65D36] font-semibold text-xs">MSME Certified</span>
             </div>
           </div>
         </div>
