@@ -315,7 +315,7 @@ export default function RootLayout({
     >
       <head>
         {/* Google Tag Manager / Analytics */}
-        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PPSL45ZV" />
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K32NRS2F" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -334,7 +334,7 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PPSL45ZV"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-K32NRS2F"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
